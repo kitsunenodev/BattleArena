@@ -29,7 +29,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5d6f26f-1d14-465f-afd2-6e16a15f4bc9" name="Changes" comment="" />
+    <list default="true" id="c5d6f26f-1d14-465f-afd2-6e16a15f4bc9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Background.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Background.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprites/raw/grass_template2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1a11ecc7472559d9f0ca.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-5423463ccd6877e245b9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-10-31T08-41-31-0103.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-10-31T15-42-18-0468.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-BattleArena-Debug-c3ab4e43efacc3cdb20a.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-BattleArena-Debug-a5ba240df2478f2bef62.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +90,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\f.collet\CLionProjects\BattleArena\Sprites\raw" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
@@ -95,7 +115,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730362769456</updated>
-      <workItem from="1730362772245" duration="18543000" />
+      <workItem from="1730362772245" duration="20225000" />
     </task>
     <servers />
   </component>

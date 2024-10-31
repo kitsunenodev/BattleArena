@@ -27,7 +27,9 @@ add_executable(BattleArena main.cpp
         LivingEntity.cpp
         LivingEntity.h
         Player.cpp
-        Player.h)
+        Player.h
+        Background.cpp
+        Background.h)
 
 # Debug or release libs based on config type
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")

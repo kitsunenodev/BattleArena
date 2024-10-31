@@ -81,6 +81,14 @@ build CMakeFiles/BattleArena.dir/Player.cpp.obj: CXX_COMPILER__BattleArena_unsca
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir
 
+build CMakeFiles/BattleArena.dir/Background.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Background.cpp || cmake_object_order_depends_target_BattleArena
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\BattleArena.dir\Background.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles\BattleArena.dir
+  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target BattleArena
@@ -89,7 +97,7 @@ build CMakeFiles/BattleArena.dir/Player.cpp.obj: CXX_COMPILER__BattleArena_unsca
 #############################################
 # Link the executable BattleArena.exe
 
-build BattleArena.exe: CXX_EXECUTABLE_LINKER__BattleArena_Debug CMakeFiles/BattleArena.dir/main.cpp.obj CMakeFiles/BattleArena.dir/Entity.cpp.obj CMakeFiles/BattleArena.dir/LivingEntity.cpp.obj CMakeFiles/BattleArena.dir/Player.cpp.obj
+build BattleArena.exe: CXX_EXECUTABLE_LINKER__BattleArena_Debug CMakeFiles/BattleArena.dir/main.cpp.obj CMakeFiles/BattleArena.dir/Entity.cpp.obj CMakeFiles/BattleArena.dir/LivingEntity.cpp.obj CMakeFiles/BattleArena.dir/Player.cpp.obj CMakeFiles/BattleArena.dir/Background.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lsfml-graphics-s-d  -lsfml-window-s-d  -lsfml-system-s-d  -lsfml-audio-s-d  -lfreetype  -lopengl32  -lwinmm  -lgdi32  -lopenal32  -lflac  -lvorbisenc  -lvorbisfile  -lvorbis  -logg  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LC:/SFML-2.6.1/lib
