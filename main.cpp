@@ -24,6 +24,7 @@ int main()
       }
     }
 
+    player1.Rotate(window);
     player1.Move(deltaTime);
     window.clear();
     background.Display(window);

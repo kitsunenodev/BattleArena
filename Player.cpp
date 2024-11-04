@@ -4,6 +4,7 @@
 
 #include "Player.h"
 
+#include <cmath>
 #include <SFML/Window/Event.hpp>
 Player::Player(const std::string &filename, int maxHealth, int armor, float speed): LivingEntity(filename,maxHealth,armor,speed) {
     verticalMovement = 0;
@@ -12,6 +13,7 @@ Player::Player(const std::string &filename, int maxHealth, int armor, float spee
 }
 
 void Player::Update() {
+
 
 }
 
@@ -35,9 +37,20 @@ void Player::Move(float deltaTime) {
     }
 
     Entity::Move(horizontalMovement, verticalMovement, deltaTime);
-
-
-
-
 }
+
+void Player::Rotate(sf::RenderWindow &window) {
+    sf::Vector2f currentPosition = sprite.getPosition();
+    sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+
+    float dirX = mousePos.x - currentPosition.x;
+    float dirY = mousePos.y - currentPosition.y;
+
+    float angle = std::atan2(dirY, dirX);
+    angle *= 180 /M_PI;
+    sprite.setRotation(angle);
+}
+
+
+
 

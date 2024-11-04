@@ -1,11 +1,16 @@
 # ninja log v6
-6	829	7520790262218027	CMakeFiles/BattleArena.dir/main.cpp.obj	13d79ffb90785de6
+6	875	7520929447941167	CMakeFiles/BattleArena.dir/main.cpp.obj	13d79ffb90785de6
 46	743	7520783293425400	CMakeFiles/BattleArena.dir/Player.cpp.obj	ce8a384a29854a49
 6	780	7520785402977190	CMakeFiles/BattleArena.dir/Entity.cpp.obj	564f4c89d4f68802
-830	2045	7520790270459200	BattleArena.exe	2fcf21eabac511f2
-32	736	7520783293285780	CMakeFiles/BattleArena.dir/LivingEntity.cpp.obj	1faee9cc253a3cea
-19	701	7520929244818099	CMakeFiles/BattleArena.dir/Background.cpp.obj	eedc2439d93a4902
-7	817	7520929244698332	CMakeFiles/BattleArena.dir/main.cpp.obj	13d79ffb90785de6
-817	1453	7520929252807033	BattleArena.exe	5e3148888df9c005
-6	875	7520929447941167	CMakeFiles/BattleArena.dir/main.cpp.obj	13d79ffb90785de6
 876	1404	7520929456633841	BattleArena.exe	5e3148888df9c005
+19	701	7520929244818099	CMakeFiles/BattleArena.dir/Background.cpp.obj	eedc2439d93a4902
+32	736	7520783293285780	CMakeFiles/BattleArena.dir/LivingEntity.cpp.obj	1faee9cc253a3cea
+127	289	7524126271539343	CMakeFiles/BattleArena.dir/Weapon.cpp.obj	a3a076edc16f804a
+140	298	7524126271668992	CMakeFiles/BattleArena.dir/Ammunition.cpp.obj	370f928ed863b9ad
+100	1077	7524126271270063	CMakeFiles/BattleArena.dir/LivingEntity.cpp.obj	1faee9cc253a3cea
+113	1249	7524126271399710	CMakeFiles/BattleArena.dir/Player.cpp.obj	ce8a384a29854a49
+87	1255	7524126271130423	CMakeFiles/BattleArena.dir/Entity.cpp.obj	564f4c89d4f68802
+19	1278	7524126270452236	CMakeFiles/BattleArena.dir/main.cpp.obj	13d79ffb90785de6
+1278	2402	7524126283045040	BattleArena.exe	23b4997faa6d3b1f
+7	753	7524127152405906	CMakeFiles/BattleArena.dir/Entity.cpp.obj	564f4c89d4f68802
+754	1289	7524127159873691	BattleArena.exe	23b4997faa6d3b1f

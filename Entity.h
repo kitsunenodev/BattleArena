@@ -18,6 +18,7 @@ protected:
 public:
     virtual ~Entity() = default;
     virtual void Update() = 0;
+    virtual void Rotate(sf::RenderWindow & window) = 0;
     Entity();
     Entity(const std::string &filename, float speed);
     void Move(int x, int y,float deltaTime);

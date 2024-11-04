@@ -12,6 +12,7 @@ public:
     Player(const std::string &filename, int maxHealth, int armor, float speed);
     void Update() override;
     void Move(float deltaTime);
+    void Rotate(sf::RenderWindow & window) override;
     void ClampPosition();
 protected:
     int verticalMovement;

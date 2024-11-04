@@ -9,6 +9,7 @@
 
 Entity::Entity() {
     speed = 1;
+    sprite.setOrigin(texture.getSize().x/2, texture.getSize().y/2);
 
 }
 
@@ -17,6 +18,7 @@ Entity::Entity(const std::string &filename, float speed) {
     this->sprite.setTexture(texture);
     this->speed = speed;
     sprite.setPosition(100,100);
+    sprite.setOrigin(texture.getSize().x/2, texture.getSize().y/2);
 }
 
 void Entity::Move(int x, int y, float deltaTime) {

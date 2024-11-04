@@ -29,7 +29,11 @@ add_executable(BattleArena main.cpp
         Player.cpp
         Player.h
         Background.cpp
-        Background.h)
+        Background.h
+        Ammunition.h
+        Weapon.h
+        Weapon.cpp
+        Ammunition.cpp)
 
 # Debug or release libs based on config type
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
