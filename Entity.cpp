@@ -26,8 +26,8 @@ void Entity::Move(int x, int y, float deltaTime) {
     float normalizedSpeedY = 0;
     float totalSpeedSquared = speed * speed;
 
-    normalizedSpeedX = x * sqrt(totalSpeedSquared - (totalSpeedSquared * 0.5 * y));
-    normalizedSpeedY = y * sqrt(totalSpeedSquared - (totalSpeedSquared * 0.5 * x));
+    normalizedSpeedX = x * sqrt(totalSpeedSquared - (totalSpeedSquared * 0.5 * abs(y)));
+    normalizedSpeedY = y * sqrt(totalSpeedSquared - (totalSpeedSquared * 0.5 * abs(x)));
     sprite.move(normalizedSpeedX * deltaTime, normalizedSpeedY * deltaTime);
 
 }
