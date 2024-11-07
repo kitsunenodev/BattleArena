@@ -45,14 +45,17 @@ void Player::Move(float deltaTime) {
     }
 
     Entity::Move(horizontalMovement, verticalMovement, deltaTime);
+    currentWeapon->SetPosition(
+        sprite.getPosition().x + texture.getSize().x/2,
+        sprite.getPosition().y + texture.getSize().y/2);
     ClampPosition();
     player_view.setCenter(sprite.getPosition());
 }
 
-void Player::Rotate(sf::RenderWindow &window) {
+void Player::Rotate() {
     sf::Vector2f currentPosition = sprite.getPosition();
-    sf::Vector2i mousePos = sf::Mouse::getPosition(window);
-    sf::Vector2f mousePosWorld = window.mapPixelToCoords(mousePos);
+    sf::Vector2i mousePos = sf::Mouse::getPosition(GameManager::GetInstance()->window_);
+    sf::Vector2f mousePosWorld = GameManager::GetInstance()->window_.mapPixelToCoords(mousePos);
 
     float dirX = mousePosWorld.x - currentPosition.x;
     float dirY = mousePosWorld.y - currentPosition.y;
@@ -65,6 +68,7 @@ void Player::Rotate(sf::RenderWindow &window) {
 void Player::Display(sf::RenderWindow &window) {
     window.setView(player_view);
     Entity::Display(window);
+    currentWeapon->Display(window);
 }
 
 void Player::ClampPosition() {

@@ -3,3 +3,15 @@
 //
 
 #include "RegularAmmo.h"
+
+RegularAmmo::RegularAmmo() {
+}
+
+void RegularAmmo::Rotate() {
+
+}
+
+void RegularAmmo::Update() {
+
+}
+

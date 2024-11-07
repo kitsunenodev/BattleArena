@@ -3,3 +3,17 @@
 //
 
 #include "ExplosiveAmmo.h"
+
+ExplosiveAmmo::ExplosiveAmmo() {
+
+}
+
+void ExplosiveAmmo::Rotate() {
+
+}
+
+void ExplosiveAmmo::Update() {
+
+}
+
+

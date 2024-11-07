@@ -3,3 +3,16 @@
 //
 
 #include "PenetrativeAmmo.h"
+
+PenetrativeAmmo::PenetrativeAmmo() {}
+
+void PenetrativeAmmo::Rotate() {
+
+}
+
+void PenetrativeAmmo::Update() {
+
+}
+
+
+

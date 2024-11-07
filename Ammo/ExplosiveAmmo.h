@@ -4,10 +4,14 @@
 
 #ifndef EXPLOSIVEAMMO_H
 #define EXPLOSIVEAMMO_H
+#include "Ammunition.h"
 
 
-
-class ExplosiveAmmo {
+class ExplosiveAmmo: public Ammunition{
+public:
+    ExplosiveAmmo();
+    void Update() override;
+    void Rotate() override;
 
 };
 

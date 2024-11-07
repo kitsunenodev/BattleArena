@@ -9,7 +9,7 @@
 
 class BasicEnemy : public Enemy{
     void Update() override;
-    void Rotate(sf::RenderWindow &window) override;
+    void Rotate() override;
 
 };
 

@@ -3,3 +3,6 @@
 //
 
 #include "Weapon.h"
+
+Weapon::Weapon():Entity() {
+}

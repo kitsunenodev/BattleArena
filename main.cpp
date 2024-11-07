@@ -31,7 +31,7 @@ int main()
       }
     }
 
-    player1.Rotate(GameManager::GetInstance()->window_);
+    player1.Rotate();
     player1.Move(deltaTime);
     GameManager::GetInstance()->window_.clear();
     background.Display(GameManager::GetInstance()->window_);

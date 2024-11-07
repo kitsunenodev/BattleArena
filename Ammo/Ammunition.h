@@ -6,10 +6,16 @@
 #define BATTLEARENA_AMMUNITION_H
 #include "../Entity//Entity.h"
 
-
+enum AmmoType {
+    REGULAR_AMMO,
+    EXPLOSIVE_AMMO,
+    PENETRATIVE_AMMO
+};
 class Ammunition : public Entity{
 
 };
+
+
 
 
 #endif //BATTLEARENA_AMMUNITION_H

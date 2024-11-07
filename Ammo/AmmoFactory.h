@@ -4,10 +4,12 @@
 
 #ifndef AMMOFACTORY_H
 #define AMMOFACTORY_H
-
+#include "Ammunition.h"
 
 
 class AmmoFactory {
+public:
+    static Ammunition* CreateAmmo(AmmoType type);
 
 };
 

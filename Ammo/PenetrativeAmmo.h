@@ -4,10 +4,14 @@
 
 #ifndef PENETRATIVEAMMO_H
 #define PENETRATIVEAMMO_H
+#include "Ammunition.h"
 
 
-
-class PenetrativeAmmo {
+class PenetrativeAmmo : public Ammunition{
+public:
+    PenetrativeAmmo();
+    void Update() override;
+    void Rotate() override;
 
 };
 

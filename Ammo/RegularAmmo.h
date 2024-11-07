@@ -4,10 +4,14 @@
 
 #ifndef REGULARAMMO_H
 #define REGULARAMMO_H
+#include "Ammunition.h"
 
 
-
-class RegularAmmo {
+class RegularAmmo: public Ammunition{
+public:
+    RegularAmmo();
+    void Update() override;
+    void Rotate() override;
 
 };
 
