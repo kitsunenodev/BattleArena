@@ -4,9 +4,10 @@
 
 #ifndef BATTLEARENA_AMMUNITION_H
 #define BATTLEARENA_AMMUNITION_H
+#include "Entity.h"
 
 
-class Ammunition {
+class Ammunition : public Entity{
 
 };
 
