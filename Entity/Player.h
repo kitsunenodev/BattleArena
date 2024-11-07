@@ -15,7 +15,9 @@ public:
     void Move(float deltaTime);
     void Rotate(sf::RenderWindow & window) override;
     void ClampPosition();
+    void Display(sf::RenderWindow &window);
 protected:
+    sf::View player_view;
     int verticalMovement;
     int horizontalMovement;
 

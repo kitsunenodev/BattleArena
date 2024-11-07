@@ -3,7 +3,6 @@
 //
 
 #include "Entity.h"
-
 #include <cmath>
 #include <SFML/Graphics/Texture.hpp>
 

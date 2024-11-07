@@ -5,10 +5,18 @@
 #include "Player.h"
 
 #include <cmath>
+#include <iostream>
 #include <SFML/Window/Event.hpp>
+
+#include "../GameManager.h"
+
 Player::Player(const std::string &filename, int maxHealth, int armor, float speed): LivingEntity(filename,maxHealth,armor,speed) {
     verticalMovement = 0;
     horizontalMovement = 0;
+    player_view.reset(sf::FloatRect(0.0f,0.0f,200.0f,200.0f));
+    player_view.zoom(4.f);
+    player_view.setViewport(sf::FloatRect(0.f,0.f,1.f,1.f));
+
 
 }
 
@@ -37,19 +45,50 @@ void Player::Move(float deltaTime) {
     }
 
     Entity::Move(horizontalMovement, verticalMovement, deltaTime);
+    ClampPosition();
+    player_view.setCenter(sprite.getPosition());
 }
 
 void Player::Rotate(sf::RenderWindow &window) {
     sf::Vector2f currentPosition = sprite.getPosition();
     sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+    sf::Vector2f mousePosWorld = window.mapPixelToCoords(mousePos);
 
-    float dirX = mousePos.x - currentPosition.x;
-    float dirY = mousePos.y - currentPosition.y;
+    float dirX = mousePosWorld.x - currentPosition.x;
+    float dirY = mousePosWorld.y - currentPosition.y;
 
     float angle = std::atan2(dirY, dirX);
     angle *= 180 /M_PI;
     sprite.setRotation(angle);
 }
+
+void Player::Display(sf::RenderWindow &window) {
+    window.setView(player_view);
+    Entity::Display(window);
+}
+
+void Player::ClampPosition() {
+    float xMax = static_cast<float>(GameManager::GetInstance()->GetArenaSize().x);
+    float yMax = float(GameManager::GetInstance()->GetArenaSize().y);
+
+
+    float posX = std::max(
+        std::min(sprite.getPosition().x ,
+            xMax -sprite.getTexture()->getSize().x/2),
+        0.f + sprite.getTexture()->getSize().x/2);
+
+    float posY = std::max(
+        std::min(sprite.getPosition().y ,
+            yMax -sprite.getTexture()->getSize().y/2),
+            0.f + sprite.getTexture()->getSize().y/2);
+    sprite.setPosition(posX,posY);
+
+
+
+}
+
+
+
 
 
 

@@ -15,6 +15,9 @@ protected:
     sf::Sprite sprite_;
 public:
     Background(const std::string &filename);
+    Background();
+    sf::Vector2u GetSize();
+
     void Display(sf::RenderWindow &window);
 };
 

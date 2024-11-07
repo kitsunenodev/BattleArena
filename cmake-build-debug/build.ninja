@@ -57,29 +57,29 @@ build CMakeFiles/BattleArena.dir/main.cpp.obj: CXX_COMPILER__BattleArena_unscann
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir
 
-build CMakeFiles/BattleArena.dir/Entity.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Entity.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Entity/Entity.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Entity/Entity.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\BattleArena.dir\Entity.cpp.obj.d
+  DEP_FILE = CMakeFiles\BattleArena.dir\Entity\Entity.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -IC:/SFML-2.6.1/include
   OBJECT_DIR = CMakeFiles\BattleArena.dir
-  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir
+  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Entity
 
-build CMakeFiles/BattleArena.dir/LivingEntity.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/LivingEntity.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Entity/LivingEntity.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Entity/LivingEntity.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\BattleArena.dir\LivingEntity.cpp.obj.d
+  DEP_FILE = CMakeFiles\BattleArena.dir\Entity\LivingEntity.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -IC:/SFML-2.6.1/include
   OBJECT_DIR = CMakeFiles\BattleArena.dir
-  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir
+  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Entity
 
-build CMakeFiles/BattleArena.dir/Player.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Player.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Entity/Player.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Entity/Player.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\BattleArena.dir\Player.cpp.obj.d
+  DEP_FILE = CMakeFiles\BattleArena.dir\Entity\Player.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -IC:/SFML-2.6.1/include
   OBJECT_DIR = CMakeFiles\BattleArena.dir
-  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir
+  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Entity
 
 build CMakeFiles/BattleArena.dir/Background.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Background.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
@@ -89,21 +89,77 @@ build CMakeFiles/BattleArena.dir/Background.cpp.obj: CXX_COMPILER__BattleArena_u
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir
 
-build CMakeFiles/BattleArena.dir/Weapon.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Weapon.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Weapon/Weapon.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Weapon/Weapon.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\BattleArena.dir\Weapon.cpp.obj.d
+  DEP_FILE = CMakeFiles\BattleArena.dir\Weapon\Weapon.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles\BattleArena.dir
+  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Weapon
+
+build CMakeFiles/BattleArena.dir/Ammo/Ammunition.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Ammo/Ammunition.cpp || cmake_object_order_depends_target_BattleArena
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\BattleArena.dir\Ammo\Ammunition.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles\BattleArena.dir
+  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Ammo
+
+build CMakeFiles/BattleArena.dir/GameManager.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/GameManager.cpp || cmake_object_order_depends_target_BattleArena
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\BattleArena.dir\GameManager.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -IC:/SFML-2.6.1/include
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir
 
-build CMakeFiles/BattleArena.dir/Ammunition.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Ammunition.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Entity/Enemy.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Entity/Enemy.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\BattleArena.dir\Ammunition.cpp.obj.d
+  DEP_FILE = CMakeFiles\BattleArena.dir\Entity\Enemy.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -IC:/SFML-2.6.1/include
   OBJECT_DIR = CMakeFiles\BattleArena.dir
-  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir
+  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Entity
+
+build CMakeFiles/BattleArena.dir/Entity/BasicEnemy.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Entity/BasicEnemy.cpp || cmake_object_order_depends_target_BattleArena
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\BattleArena.dir\Entity\BasicEnemy.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles\BattleArena.dir
+  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Entity
+
+build CMakeFiles/BattleArena.dir/Ammo/RegularAmmo.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Ammo/RegularAmmo.cpp || cmake_object_order_depends_target_BattleArena
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\BattleArena.dir\Ammo\RegularAmmo.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles\BattleArena.dir
+  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Ammo
+
+build CMakeFiles/BattleArena.dir/Ammo/ExplosiveAmmo.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Ammo/ExplosiveAmmo.cpp || cmake_object_order_depends_target_BattleArena
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\BattleArena.dir\Ammo\ExplosiveAmmo.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles\BattleArena.dir
+  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Ammo
+
+build CMakeFiles/BattleArena.dir/Ammo/PenetrativeAmmo.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Ammo/PenetrativeAmmo.cpp || cmake_object_order_depends_target_BattleArena
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\BattleArena.dir\Ammo\PenetrativeAmmo.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles\BattleArena.dir
+  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Ammo
+
+build CMakeFiles/BattleArena.dir/Ammo/AmmoFactory.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Ammo/AmmoFactory.cpp || cmake_object_order_depends_target_BattleArena
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\BattleArena.dir\Ammo\AmmoFactory.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles\BattleArena.dir
+  OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Ammo
 
 
 # =============================================================================
@@ -113,7 +169,7 @@ build CMakeFiles/BattleArena.dir/Ammunition.cpp.obj: CXX_COMPILER__BattleArena_u
 #############################################
 # Link the executable BattleArena.exe
 
-build BattleArena.exe: CXX_EXECUTABLE_LINKER__BattleArena_Debug CMakeFiles/BattleArena.dir/main.cpp.obj CMakeFiles/BattleArena.dir/Entity.cpp.obj CMakeFiles/BattleArena.dir/LivingEntity.cpp.obj CMakeFiles/BattleArena.dir/Player.cpp.obj CMakeFiles/BattleArena.dir/Background.cpp.obj CMakeFiles/BattleArena.dir/Weapon.cpp.obj CMakeFiles/BattleArena.dir/Ammunition.cpp.obj
+build BattleArena.exe: CXX_EXECUTABLE_LINKER__BattleArena_Debug CMakeFiles/BattleArena.dir/main.cpp.obj CMakeFiles/BattleArena.dir/Entity/Entity.cpp.obj CMakeFiles/BattleArena.dir/Entity/LivingEntity.cpp.obj CMakeFiles/BattleArena.dir/Entity/Player.cpp.obj CMakeFiles/BattleArena.dir/Background.cpp.obj CMakeFiles/BattleArena.dir/Weapon/Weapon.cpp.obj CMakeFiles/BattleArena.dir/Ammo/Ammunition.cpp.obj CMakeFiles/BattleArena.dir/GameManager.cpp.obj CMakeFiles/BattleArena.dir/Entity/Enemy.cpp.obj CMakeFiles/BattleArena.dir/Entity/BasicEnemy.cpp.obj CMakeFiles/BattleArena.dir/Ammo/RegularAmmo.cpp.obj CMakeFiles/BattleArena.dir/Ammo/ExplosiveAmmo.cpp.obj CMakeFiles/BattleArena.dir/Ammo/PenetrativeAmmo.cpp.obj CMakeFiles/BattleArena.dir/Ammo/AmmoFactory.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lsfml-graphics-s-d  -lsfml-window-s-d  -lsfml-system-s-d  -lsfml-audio-s-d  -lfreetype  -lopengl32  -lwinmm  -lgdi32  -lopenal32  -lflac  -lvorbisenc  -lvorbisfile  -lvorbis  -logg  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LC:/SFML-2.6.1/lib

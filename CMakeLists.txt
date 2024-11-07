@@ -22,18 +22,32 @@ link_directories(${SFML_LIBRARY_DIR})
 
 
 add_executable(BattleArena main.cpp
-        Entity.cpp
-        Entity.h
-        LivingEntity.cpp
-        LivingEntity.h
-        Player.cpp
-        Player.h
+        Entity/Entity.cpp
+        Entity/Entity.h
+        Entity/LivingEntity.cpp
+        Entity/LivingEntity.h
+        Entity/Player.cpp
+        Entity/Player.h
         Background.cpp
         Background.h
-        Ammunition.h
-        Weapon.h
-        Weapon.cpp
-        Ammunition.cpp)
+        Ammo/Ammunition.h
+        Weapon/Weapon.h
+        Weapon/Weapon.cpp
+        Ammo/Ammunition.cpp
+        GameManager.cpp
+        GameManager.h
+        Entity/Enemy.cpp
+        Entity/Enemy.h
+        Entity/BasicEnemy.cpp
+        Entity/BasicEnemy.h
+        Ammo/RegularAmmo.cpp
+        Ammo/RegularAmmo.h
+        Ammo/ExplosiveAmmo.cpp
+        Ammo/ExplosiveAmmo.h
+        Ammo/PenetrativeAmmo.cpp
+        Ammo/PenetrativeAmmo.h
+        Ammo/AmmoFactory.cpp
+        Ammo/AmmoFactory.h)
 
 # Debug or release libs based on config type
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")

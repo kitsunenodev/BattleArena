@@ -2,33 +2,40 @@
 #include <SFML/Graphics.hpp>
 
 #include "Background.h"
-#include "Player.h"
+#include "GameManager.h"
+#include "Entity/Player.h"
 
+GameManager* GameManager::instance = nullptr;
 int main()
 {
 
+  GameManager* instance = GameManager::GetInstance();
   const char *playerSprite = "../Sprites/raw/player/ship2.png";
   const char *BackgroundFile = "../Sprites/raw/grass_template2.jpg";
   Player player1  = Player(playerSprite,10,1,100);
   Background background = Background(BackgroundFile);
-  sf::RenderWindow window(sf::VideoMode(900,600),"Main Scene");
+  instance->SetBackGround(background);
   sf::Clock clock;
-  while (window.isOpen()) {
+  while (GameManager::GetInstance()->window_.isOpen()) {
     sf::Event event;
     sf::Time time = clock.restart();
     float deltaTime = time.asSeconds();
 
-    while (window.pollEvent(event)) {
+    while (GameManager::GetInstance()->window_.pollEvent(event)) {
       if (event.type == sf::Event::Closed) {
-        window.close();
+        GameManager::GetInstance()->window_.close();
+      }
+      if (event.type == sf::Event::KeyPressed) {
+        if (event.key.code == sf::Keyboard::Key::Escape)
+        GameManager::GetInstance()->window_.close();
       }
     }
 
-    player1.Rotate(window);
+    player1.Rotate(GameManager::GetInstance()->window_);
     player1.Move(deltaTime);
-    window.clear();
-    background.Display(window);
-    player1.Display(window);
-    window.display();
+    GameManager::GetInstance()->window_.clear();
+    background.Display(GameManager::GetInstance()->window_);
+    player1.Display(GameManager::GetInstance()->window_);
+    GameManager::GetInstance()->window_.display();
   }
 }

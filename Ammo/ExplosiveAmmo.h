@@ -2,15 +2,15 @@
 // Created by f.collet on 07/11/2024.
 //
 
-#ifndef EXPLOISVEAMMO_H
-#define EXPLOISVEAMMO_H
+#ifndef EXPLOSIVEAMMO_H
+#define EXPLOSIVEAMMO_H
 
 
 
-class ExploisveAmmo {
+class ExplosiveAmmo {
 
 };
 
 
 
-#endif //EXPLOISVEAMMO_H
+#endif //EXPLOSIVEAMMO_H

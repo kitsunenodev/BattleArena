@@ -8,9 +8,16 @@ Background::Background(const std::string &filename) {
     texture_.loadFromFile(filename);
     sprite_.setTexture(texture_);
 }
+Background::Background() {
+}
 
 void Background::Display(sf::RenderWindow& window) {
     window.draw(sprite_);
 }
+
+sf::Vector2u Background::GetSize() {
+    return texture_.getSize();
+}
+
 
 
