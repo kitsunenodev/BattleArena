@@ -12,7 +12,6 @@
 
 class Player: public LivingEntity{
 public:
-
     Player(const std::string &filename, int maxHealth, int armor, float speed);
     void Update() override;
     void Move(float deltaTime);

@@ -45,11 +45,12 @@ void Player::Move(float deltaTime) {
     }
 
     Entity::Move(horizontalMovement, verticalMovement, deltaTime);
-    currentWeapon->SetPosition(
-        sprite.getPosition().x + texture.getSize().x/2,
-        sprite.getPosition().y + texture.getSize().y/2);
+    currentWeapon->GetSprite().setPosition(
+        sprite.getPosition().x + GetSpriteHalfWidth()+ currentWeapon->GetSpriteHalfWidth(),
+        sprite.getPosition().y);
     ClampPosition();
     player_view.setCenter(sprite.getPosition());
+
 }
 
 void Player::Rotate() {
@@ -63,12 +64,16 @@ void Player::Rotate() {
     float angle = std::atan2(dirY, dirX);
     angle *= 180 /M_PI;
     sprite.setRotation(angle);
+    currentWeapon->GetSprite().setOrigin(sprite.getPosition() - currentWeapon->GetSprite().getPosition());
+    currentWeapon->GetSprite().setRotation(angle);
+    currentWeapon->ResetOrigin();
+
 }
 
 void Player::Display(sf::RenderWindow &window) {
     window.setView(player_view);
     Entity::Display(window);
-    currentWeapon->Display(window);
+    //currentWeapon->Display(window);
 }
 
 void Player::ClampPosition() {
@@ -78,8 +83,8 @@ void Player::ClampPosition() {
 
     float posX = std::max(
         std::min(sprite.getPosition().x ,
-            xMax -sprite.getTexture()->getSize().x/2),
-        0.f + sprite.getTexture()->getSize().x/2);
+            xMax -GetSpriteHalfWidth()),
+        0.f + GetSpriteHalfWidth());
 
     float posY = std::max(
         std::min(sprite.getPosition().y ,

@@ -47,7 +47,9 @@ add_executable(BattleArena main.cpp
         Ammo/PenetrativeAmmo.cpp
         Ammo/PenetrativeAmmo.h
         Ammo/AmmoFactory.cpp
-        Ammo/AmmoFactory.h)
+        Ammo/AmmoFactory.h
+        Weapon/WeaponFactory.cpp
+        Weapon/WeaponFactory.h)
 
 # Debug or release libs based on config type
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")

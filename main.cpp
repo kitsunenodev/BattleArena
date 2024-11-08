@@ -12,6 +12,8 @@ int main()
   GameManager* instance = GameManager::GetInstance();
   const char *playerSprite = "../Sprites/raw/player/ship2.png";
   const char *BackgroundFile = "../Sprites/raw/grass_template2.jpg";
+  const char *WeaponSprite = "..Sprites/raw/projectiles/rocket.png";
+  Weapon weapon =  Weapon(WeaponSprite);
   Player player1  = Player(playerSprite,10,1,100);
   Background background = Background(BackgroundFile);
   instance->SetBackGround(background);

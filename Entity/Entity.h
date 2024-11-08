@@ -16,6 +16,10 @@ protected:
     sf::Texture texture;
 
 public:
+    float GetSpriteHalfWidth() const;
+    float GetSpriteHalfHeight() const;
+    sf::Sprite GetSprite();
+    void ResetOrigin();
     virtual ~Entity() = default;
     virtual void Update() = 0;
     virtual void Rotate() = 0;

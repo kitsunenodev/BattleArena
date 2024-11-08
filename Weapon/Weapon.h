@@ -10,15 +10,17 @@
 
 class Weapon: public Entity {
 protected:
-    AmmoType type = REGULAR_AMMO;
+    AmmoType ammoType;
     float timeBetweenShoot = 0;
     float timeBeforeShoot = 0;
+    float reloadTime = 0;
     int TotalAmmo = 0;
     int loadedAmmo = 0;
 
 public:
     Weapon();
-    void SetPosition(float x, float y);
+    Weapon(const std::string& filename);
+    Weapon(const std::string& filename, int munition, AmmoType ammoType);
     void Update() override;
     void Rotate() override;
     void Shoot();

@@ -7,7 +7,7 @@
 #include <SFML/Graphics/Texture.hpp>
 
 Entity::Entity() {
-    speed = 1;
+    speed = 0;
     sprite.setOrigin(texture.getSize().x/2, texture.getSize().y/2);
 
 }
@@ -17,7 +17,7 @@ Entity::Entity(const std::string &filename, float speed) {
     this->sprite.setTexture(texture);
     this->speed = speed;
     sprite.setPosition(100,100);
-    sprite.setOrigin(texture.getSize().x/2, texture.getSize().y/2);
+    ResetOrigin();
 }
 
 void Entity::Move(int x, int y, float deltaTime) {
@@ -31,8 +31,23 @@ void Entity::Move(int x, int y, float deltaTime) {
 
 }
 
+float Entity::GetSpriteHalfWidth() const {
+    return texture.getSize().x/2;
+}
+
+float Entity::GetSpriteHalfHeight() const {
+    return texture.getSize().y/2;
+}
+
 void Entity::Display(sf::RenderWindow &window) {
     window.draw(sprite);
+}
+void Entity::ResetOrigin() {
+    sprite.setOrigin(GetSpriteHalfWidth(),GetSpriteHalfHeight());
+}
+
+sf::Sprite Entity::GetSprite() {
+    return sprite;
 }
 
 
