@@ -18,6 +18,7 @@ public:
     void Rotate() override;
     void ClampPosition();
     void Display(sf::RenderWindow &window);
+    void AddWeapon(Weapon* weapon);
 protected:
     std::list<Weapon*> weapons_;
     Weapon* currentWeapon;

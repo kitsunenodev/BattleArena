@@ -21,7 +21,9 @@ Player::Player(const std::string &filename, int maxHealth, int armor, float spee
 }
 
 void Player::Update() {
-
+    if (currentWeapon == nullptr) {
+        currentWeapon = *weapons_.begin();
+    }
 
 }
 
@@ -45,10 +47,12 @@ void Player::Move(float deltaTime) {
     }
 
     Entity::Move(horizontalMovement, verticalMovement, deltaTime);
-    currentWeapon->GetSprite().setPosition(
+
+    ClampPosition();
+    currentWeapon->SetPosition(
         sprite.getPosition().x + GetSpriteHalfWidth()+ currentWeapon->GetSpriteHalfWidth(),
         sprite.getPosition().y);
-    ClampPosition();
+
     player_view.setCenter(sprite.getPosition());
 
 }
@@ -64,16 +68,16 @@ void Player::Rotate() {
     float angle = std::atan2(dirY, dirX);
     angle *= 180 /M_PI;
     sprite.setRotation(angle);
-    currentWeapon->GetSprite().setOrigin(sprite.getPosition() - currentWeapon->GetSprite().getPosition());
-    currentWeapon->GetSprite().setRotation(angle);
-    currentWeapon->ResetOrigin();
+    currentWeapon->RotateGlobal(
+        sprite.getPosition(),
+        angle);
 
 }
 
 void Player::Display(sf::RenderWindow &window) {
     window.setView(player_view);
     Entity::Display(window);
-    //currentWeapon->Display(window);
+    currentWeapon->Display(window);
 }
 
 void Player::ClampPosition() {
@@ -91,10 +95,12 @@ void Player::ClampPosition() {
             yMax -sprite.getTexture()->getSize().y/2),
             0.f + sprite.getTexture()->getSize().y/2);
     sprite.setPosition(posX,posY);
-
-
-
 }
+
+void Player::AddWeapon(Weapon* weapon) {
+    weapons_.push_back(weapon);
+}
+
 
 
 

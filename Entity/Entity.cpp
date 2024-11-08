@@ -4,6 +4,7 @@
 
 #include "Entity.h"
 #include <cmath>
+#include <iostream>
 #include <SFML/Graphics/Texture.hpp>
 
 Entity::Entity() {
@@ -49,6 +50,15 @@ void Entity::ResetOrigin() {
 sf::Sprite Entity::GetSprite() {
     return sprite;
 }
+
+void Entity::SetPosition(float x, float y) {
+    sprite.setPosition(x,y);
+}
+
+void Entity::RotateGlobal(sf::Vector2f position, float angle) {
+    sprite.setRotation(angle);
+}
+
 
 
 

@@ -19,6 +19,8 @@ public:
     float GetSpriteHalfWidth() const;
     float GetSpriteHalfHeight() const;
     sf::Sprite GetSprite();
+    void SetPosition(float x, float y);
+    void RotateGlobal(sf::Vector2f position, float angle);
     void ResetOrigin();
     virtual ~Entity() = default;
     virtual void Update() = 0;
