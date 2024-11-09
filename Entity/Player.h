@@ -20,6 +20,7 @@ public:
     void Display(sf::RenderWindow &window);
     void AddWeapon(Weapon* weapon);
 protected:
+    float angle = 0;
     std::list<Weapon*> weapons_;
     Weapon* currentWeapon;
     int currentWeaponIndex;

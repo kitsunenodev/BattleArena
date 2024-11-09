@@ -49,9 +49,9 @@ void Player::Move(float deltaTime) {
     Entity::Move(horizontalMovement, verticalMovement, deltaTime);
 
     ClampPosition();
-    currentWeapon->SetPosition(
-        sprite.getPosition().x + GetSpriteHalfWidth()+ currentWeapon->GetSpriteHalfWidth(),
-        sprite.getPosition().y);
+//    currentWeapon->SetPosition(
+//        sprite.getPosition().x + GetSpriteHalfWidth()+ currentWeapon->GetSpriteHalfWidth(),
+//        sprite.getPosition().y);
 
     player_view.setCenter(sprite.getPosition());
 
@@ -65,12 +65,12 @@ void Player::Rotate() {
     float dirX = mousePosWorld.x - currentPosition.x;
     float dirY = mousePosWorld.y - currentPosition.y;
 
-    float angle = std::atan2(dirY, dirX);
+    angle = std::atan2(dirY, dirX);
     angle *= 180 /M_PI;
     sprite.setRotation(angle);
-    currentWeapon->RotateGlobal(
-        sprite.getPosition(),
-        angle);
+//    currentWeapon->RotateGlobal(
+//        sprite.getPosition(),
+//        angle);
 
 }
 

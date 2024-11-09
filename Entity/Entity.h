@@ -28,6 +28,7 @@ public:
     Entity();
     Entity(const std::string &filename, float speed);
     void Move(int x, int y,float deltaTime);
+
     void Display(sf::RenderWindow &window);
 
 };

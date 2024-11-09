@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/f.collet/CLionProjects/BattleArena/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target BattleArena
 
@@ -49,7 +49,7 @@ cmake_ninja_workdir = C$:/Users/f.collet/CLionProjects/BattleArena/cmake-build-d
 
 build cmake_object_order_depends_target_BattleArena: phony || .
 
-build CMakeFiles/BattleArena.dir/main.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/main.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/main.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/main.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -57,7 +57,7 @@ build CMakeFiles/BattleArena.dir/main.cpp.obj: CXX_COMPILER__BattleArena_unscann
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir
 
-build CMakeFiles/BattleArena.dir/Entity/Entity.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Entity/Entity.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Entity/Entity.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/Entity/Entity.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\Entity\Entity.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -65,7 +65,7 @@ build CMakeFiles/BattleArena.dir/Entity/Entity.cpp.obj: CXX_COMPILER__BattleAren
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Entity
 
-build CMakeFiles/BattleArena.dir/Entity/LivingEntity.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Entity/LivingEntity.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Entity/LivingEntity.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/Entity/LivingEntity.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\Entity\LivingEntity.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -73,7 +73,7 @@ build CMakeFiles/BattleArena.dir/Entity/LivingEntity.cpp.obj: CXX_COMPILER__Batt
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Entity
 
-build CMakeFiles/BattleArena.dir/Entity/Player.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Entity/Player.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Entity/Player.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/Entity/Player.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\Entity\Player.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -81,7 +81,7 @@ build CMakeFiles/BattleArena.dir/Entity/Player.cpp.obj: CXX_COMPILER__BattleAren
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Entity
 
-build CMakeFiles/BattleArena.dir/Background.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Background.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Background.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/Background.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\Background.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -89,7 +89,7 @@ build CMakeFiles/BattleArena.dir/Background.cpp.obj: CXX_COMPILER__BattleArena_u
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir
 
-build CMakeFiles/BattleArena.dir/Weapon/Weapon.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Weapon/Weapon.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Weapon/Weapon.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/Weapon/Weapon.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\Weapon\Weapon.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -97,7 +97,7 @@ build CMakeFiles/BattleArena.dir/Weapon/Weapon.cpp.obj: CXX_COMPILER__BattleAren
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Weapon
 
-build CMakeFiles/BattleArena.dir/Ammo/Ammunition.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Ammo/Ammunition.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Ammo/Ammunition.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/Ammo/Ammunition.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\Ammo\Ammunition.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -105,7 +105,7 @@ build CMakeFiles/BattleArena.dir/Ammo/Ammunition.cpp.obj: CXX_COMPILER__BattleAr
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Ammo
 
-build CMakeFiles/BattleArena.dir/GameManager.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/GameManager.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/GameManager.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/GameManager.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\GameManager.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -113,7 +113,7 @@ build CMakeFiles/BattleArena.dir/GameManager.cpp.obj: CXX_COMPILER__BattleArena_
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir
 
-build CMakeFiles/BattleArena.dir/Entity/Enemy.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Entity/Enemy.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Entity/Enemy.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/Entity/Enemy.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\Entity\Enemy.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -121,7 +121,7 @@ build CMakeFiles/BattleArena.dir/Entity/Enemy.cpp.obj: CXX_COMPILER__BattleArena
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Entity
 
-build CMakeFiles/BattleArena.dir/Entity/BasicEnemy.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Entity/BasicEnemy.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Entity/BasicEnemy.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/Entity/BasicEnemy.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\Entity\BasicEnemy.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -129,7 +129,7 @@ build CMakeFiles/BattleArena.dir/Entity/BasicEnemy.cpp.obj: CXX_COMPILER__Battle
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Entity
 
-build CMakeFiles/BattleArena.dir/Ammo/RegularAmmo.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Ammo/RegularAmmo.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Ammo/RegularAmmo.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/Ammo/RegularAmmo.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\Ammo\RegularAmmo.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -137,7 +137,7 @@ build CMakeFiles/BattleArena.dir/Ammo/RegularAmmo.cpp.obj: CXX_COMPILER__BattleA
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Ammo
 
-build CMakeFiles/BattleArena.dir/Ammo/ExplosiveAmmo.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Ammo/ExplosiveAmmo.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Ammo/ExplosiveAmmo.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/Ammo/ExplosiveAmmo.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\Ammo\ExplosiveAmmo.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -145,7 +145,7 @@ build CMakeFiles/BattleArena.dir/Ammo/ExplosiveAmmo.cpp.obj: CXX_COMPILER__Battl
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Ammo
 
-build CMakeFiles/BattleArena.dir/Ammo/PenetrativeAmmo.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Ammo/PenetrativeAmmo.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Ammo/PenetrativeAmmo.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/Ammo/PenetrativeAmmo.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\Ammo\PenetrativeAmmo.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -153,7 +153,7 @@ build CMakeFiles/BattleArena.dir/Ammo/PenetrativeAmmo.cpp.obj: CXX_COMPILER__Bat
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Ammo
 
-build CMakeFiles/BattleArena.dir/Ammo/AmmoFactory.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Ammo/AmmoFactory.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Ammo/AmmoFactory.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/Ammo/AmmoFactory.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\Ammo\AmmoFactory.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -161,7 +161,7 @@ build CMakeFiles/BattleArena.dir/Ammo/AmmoFactory.cpp.obj: CXX_COMPILER__BattleA
   OBJECT_DIR = CMakeFiles\BattleArena.dir
   OBJECT_FILE_DIR = CMakeFiles\BattleArena.dir\Ammo
 
-build CMakeFiles/BattleArena.dir/Weapon/WeaponFactory.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/f.collet/CLionProjects/BattleArena/Weapon/WeaponFactory.cpp || cmake_object_order_depends_target_BattleArena
+build CMakeFiles/BattleArena.dir/Weapon/WeaponFactory.cpp.obj: CXX_COMPILER__BattleArena_unscanned_Debug C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/Weapon/WeaponFactory.cpp || cmake_object_order_depends_target_BattleArena
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\BattleArena.dir\Weapon\WeaponFactory.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -193,7 +193,7 @@ build BattleArena.exe: CXX_EXECUTABLE_LINKER__BattleArena_Debug CMakeFiles/Battl
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\f.collet\CLionProjects\BattleArena\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Admin\Desktop\Rubika\C++\BattleArena\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.3\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -204,7 +204,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\Users\f.collet\CLionProjects\BattleArena\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\f.collet\CLionProjects\BattleArena -BC:\Users\f.collet\CLionProjects\BattleArena\cmake-build-debug"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Admin\Desktop\Rubika\C++\BattleArena\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\Admin\Desktop\Rubika\C++\BattleArena -BC:\Users\Admin\Desktop\Rubika\C++\BattleArena\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -222,7 +222,7 @@ build BattleArena: phony BattleArena.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/f.collet/CLionProjects/BattleArena/cmake-build-debug
+# Folder: C:/Users/Admin/Desktop/Rubika/C++/BattleArena/cmake-build-debug
 
 build all: phony BattleArena.exe
 
@@ -233,14 +233,14 @@ build all: phony BattleArena.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/f.collet/CLionProjects/BattleArena/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/f.collet/CLionProjects/BattleArena/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/Admin/Desktop/Rubika/C++/BattleArena/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake: phony
 
 
 #############################################
