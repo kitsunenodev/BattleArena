@@ -20,13 +20,15 @@ public:
     void Display(sf::RenderWindow &window);
     void AddWeapon(Weapon* weapon);
 protected:
-    float angle = 0;
+    sf::Vector2f weaponPosition;
     std::list<Weapon*> weapons_;
-    Weapon* currentWeapon;
-    int currentWeaponIndex;
+    Weapon* currentWeapon{};
+    int currentWeaponIndex{};
     sf::View player_view;
     int verticalMovement;
     int horizontalMovement;
+    void CalculateWeaponPosition();
+
 
 };
 

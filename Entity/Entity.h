@@ -11,6 +11,7 @@
 
 class Entity {
 protected:
+    float angle = 0;
     float speed;
     sf::Sprite sprite;
     sf::Texture texture;

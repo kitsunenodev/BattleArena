@@ -16,14 +16,18 @@ Player::Player(const std::string &filename, int maxHealth, int armor, float spee
     player_view.reset(sf::FloatRect(0.0f,0.0f,200.0f,200.0f));
     player_view.zoom(4.f);
     player_view.setViewport(sf::FloatRect(0.f,0.f,1.f,1.f));
+    currentWeapon = nullptr;
 
 
 }
 
 void Player::Update() {
     if (currentWeapon == nullptr) {
+        std::cout << currentWeapon << std::endl;
         currentWeapon = *weapons_.begin();
     }
+    CalculateWeaponPosition();
+    currentWeapon->SetPosition(weaponPosition.x, weaponPosition.y);
 
 }
 
@@ -49,9 +53,7 @@ void Player::Move(float deltaTime) {
     Entity::Move(horizontalMovement, verticalMovement, deltaTime);
 
     ClampPosition();
-//    currentWeapon->SetPosition(
-//        sprite.getPosition().x + GetSpriteHalfWidth()+ currentWeapon->GetSpriteHalfWidth(),
-//        sprite.getPosition().y);
+
 
     player_view.setCenter(sprite.getPosition());
 
@@ -68,16 +70,12 @@ void Player::Rotate() {
     angle = std::atan2(dirY, dirX);
     angle *= 180 /M_PI;
     sprite.setRotation(angle);
-//    currentWeapon->RotateGlobal(
-//        sprite.getPosition(),
-//        angle);
 
 }
 
 void Player::Display(sf::RenderWindow &window) {
     window.setView(player_view);
     Entity::Display(window);
-
     currentWeapon->Display(window);
 }
 
@@ -100,6 +98,16 @@ void Player::ClampPosition() {
 
 void Player::AddWeapon(Weapon* weapon) {
     weapons_.push_back(weapon);
+}
+
+void Player::CalculateWeaponPosition() {
+    weaponPosition.x = sprite.getPosition().x + (cos(angle * M_PI/180) *
+            (sprite.getTexture()->getSize().x/2 + currentWeapon->GetSprite().getTexture()->getSize().x/2));
+    weaponPosition.y = sprite.getPosition().y + (sin(angle *M_PI/180) * (sprite.getTexture()->getSize().y));
+    currentWeapon->SetPosition(weaponPosition.x, weaponPosition.y);
+    currentWeapon->Rotate();
+
+
 }
 
 
