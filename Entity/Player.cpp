@@ -77,6 +77,7 @@ void Player::Rotate() {
 void Player::Display(sf::RenderWindow &window) {
     window.setView(player_view);
     Entity::Display(window);
+
     currentWeapon->Display(window);
 }
 

@@ -5,6 +5,7 @@
 #include "Weapon.h"
 
 Weapon::Weapon():Entity() {
+    sprite.setPosition(100,100);
 }
 
 Weapon::Weapon(const std::string &filename):Entity(filename,0) {
@@ -25,6 +26,14 @@ void Weapon::Update() {
 }
 
 void Weapon::Rotate() {
+
+}
+
+void Weapon::Shoot() {
+
+}
+
+void Weapon::Reload() {
 
 }
 

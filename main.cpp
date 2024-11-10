@@ -13,9 +13,9 @@ int main()
   const char *playerSprite = "../Sprites/raw/player/ship2.png";
   const char *BackgroundFile = "../Sprites/raw/grass_template2.jpg";
   const char *WeaponSprite = "../Sprites/raw/projectiles/rocket.png";
-  Weapon weapon =  Weapon(WeaponSprite);
+  Weapon* weapon = new  Weapon(WeaponSprite);
   Player player1  = Player(playerSprite,10,1,100);
-  player1.AddWeapon(&weapon);
+  player1.AddWeapon(weapon);
   Background background = Background(BackgroundFile);
   instance->SetBackGround(background);
   sf::Clock clock;
@@ -36,6 +36,7 @@ int main()
     player1.Update();
     player1.Rotate();
     player1.Move(deltaTime);
+
     GameManager::GetInstance()->window_.clear();
     background.Display(GameManager::GetInstance()->window_);
     player1.Display(GameManager::GetInstance()->window_);
