@@ -61,8 +61,8 @@ void Player::Move(float deltaTime) {
 
 void Player::Rotate() {
     sf::Vector2f currentPosition = sprite.getPosition();
-    sf::Vector2i mousePos = sf::Mouse::getPosition(GameManager::GetInstance()->window_);
-    sf::Vector2f mousePosWorld = GameManager::GetInstance()->window_.mapPixelToCoords(mousePos);
+    sf::Vector2i mousePos = sf::Mouse::getPosition(GameManager::GetInstance().window_);
+    sf::Vector2f mousePosWorld = GameManager::GetInstance().window_.mapPixelToCoords(mousePos);
 
     float dirX = mousePosWorld.x - currentPosition.x;
     float dirY = mousePosWorld.y - currentPosition.y;
@@ -80,8 +80,8 @@ void Player::Display(sf::RenderWindow &window) {
 }
 
 void Player::ClampPosition() {
-    float xMax = static_cast<float>(GameManager::GetInstance()->GetArenaSize().x);
-    float yMax = float(GameManager::GetInstance()->GetArenaSize().y);
+    float xMax = static_cast<float>(GameManager::GetInstance().GetArenaSize().x);
+    float yMax = float(GameManager::GetInstance().GetArenaSize().y);
 
 
     float posX = std::max(

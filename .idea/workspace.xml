@@ -30,24 +30,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5d6f26f-1d14-465f-afd2-6e16a15f4bc9" name="Changes" comment="">
+    <list default="true" id="c5d6f26f-1d14-465f-afd2-6e16a15f4bc9" name="Changes" comment="Added Ammunition spawn point">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entity/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Entity/Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Weapon/Weapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Weapon/Weapon.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Weapon/Weapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Weapon/Weapon.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/BattleArena.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BattleArena.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Ammo/ExplosiveAmmo.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Ammo/ExplosiveAmmo.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Ammo/PenetrativeAmmo.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Ammo/PenetrativeAmmo.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Ammo/RegularAmmo.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Ammo/RegularAmmo.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Entity/Enemy.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Entity/Enemy.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Entity/LivingEntity.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Entity/LivingEntity.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Entity/Player.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Entity/Player.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/GameManager.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/GameManager.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Weapon/Weapon.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Weapon/Weapon.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Weapon/WeaponFactory.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/Weapon/WeaponFactory.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleArena.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +237,8 @@
       <workItem from="1730995083647" duration="65000" />
       <workItem from="1731055910972" duration="21975000" />
       <workItem from="1731230357695" duration="6284000" />
-      <workItem from="1731330367222" duration="4145000" />
+      <workItem from="1731330367222" duration="5526000" />
+      <workItem from="1731363189216" duration="469000" />
     </task>
     <task id="LOCAL-00001" summary="cleaned code">
       <option name="closed" value="true" />
@@ -273,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731256649806</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Ammunition spawn point">
+      <option name="closed" value="true" />
+      <created>1731336161835</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731336161836</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +306,7 @@
     <MESSAGE value="cleaned code" />
     <MESSAGE value="Bug Fix" />
     <MESSAGE value="Rotate and Replace weapon" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rotate and Replace weapon" />
+    <MESSAGE value="Added Ammunition spawn point" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Ammunition spawn point" />
   </component>
 </project>

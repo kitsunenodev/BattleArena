@@ -49,3 +49,10 @@
 1029	1828	7530371524710036	BattleArena.exe	7a4e8a4c52b2fe0d
 11	995	7530371997504799	CMakeFiles/BattleArena.dir/Entity/Player.cpp.obj	d0be412af229dce7
 996	1495	7530372007353831	BattleArena.exe	7a4e8a4c52b2fe0d
+13	1158	7530664180930231	CMakeFiles/BattleArena.dir/main.cpp.obj	a42221fc16f104dc
+1158	1680	7530664192384120	BattleArena.exe	7a4e8a4c52b2fe0d
+38	1044	7530666160073162	CMakeFiles/BattleArena.dir/GameManager.cpp.obj	450515974cdd7c21
+18	1072	7530667244765930	CMakeFiles/BattleArena.dir/main.cpp.obj	a42221fc16f104dc
+10	1061	7530667565682732	CMakeFiles/BattleArena.dir/Entity/Player.cpp.obj	d0be412af229dce7
+16	1018	7530667650894110	CMakeFiles/BattleArena.dir/Weapon/Weapon.cpp.obj	59e2f552112c3e5b
+1018	1527	7530667660915193	BattleArena.exe	7a4e8a4c52b2fe0d

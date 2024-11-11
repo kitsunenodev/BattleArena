@@ -21,15 +21,14 @@ protected:
         Background background;
 
 public:
-        static GameManager* GetInstance();
+        static GameManager& GetInstance();
         sf::RenderWindow window_;
         void Display(sf::RenderWindow &window);
         void SetBackGround(Background& background);
         sf::Vector2u GetArenaSize();
+        ~GameManager() = default;
 private:
         GameManager();
-        static GameManager* instance;
-        ~GameManager();
 
 };
 

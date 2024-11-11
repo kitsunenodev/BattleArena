@@ -15,11 +15,10 @@ GameManager::GameManager() {
     window_.create(sf::VideoMode(1920, 1080), "Main Scene", sf::Style::Fullscreen);
 }
 
-GameManager *GameManager::GetInstance(){
-    if (!instance) {
-        instance = new GameManager();
-    }
+GameManager &GameManager::GetInstance(){
+    static GameManager instance;
     return instance;
+
 }
 
 
@@ -49,5 +48,7 @@ void GameManager::SetBackGround(Background& background) {
 sf::Vector2u GameManager::GetArenaSize() {
     return background.GetSize();
 }
+
+
 
 
