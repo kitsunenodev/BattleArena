@@ -12,7 +12,7 @@ int main()
   const char *playerSprite = "../Sprites/raw/player/ship2.png";
   const char *BackgroundFile = "../Sprites/raw/grass_template2.jpg";
   const char *WeaponSprite = "../Sprites/raw/projectiles/rocket.png";
-  Weapon weapon =  Weapon(WeaponSprite);
+  Weapon weapon(WeaponSprite);
   Player player1  = Player(playerSprite,10,1,100);
   player1.AddWeapon(&weapon);
   Background background = Background(BackgroundFile);
