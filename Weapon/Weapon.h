@@ -15,7 +15,9 @@ protected:
     float timeBeforeShoot = 0;
     float reloadTime = 0;
     int TotalAmmo = 0;
+    int magazineCapacity = 0;
     int loadedAmmo = 0;
+    sf::Vector2f ammunitionSpawnPosition;
 
 public:
     Weapon();

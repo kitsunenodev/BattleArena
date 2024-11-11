@@ -9,6 +9,7 @@
 
 Weapon::Weapon():Entity() {
     sprite.setPosition(100,100);
+    sprite.setOrigin(texture.getSize().x/2, texture.getSize().y);
 }
 
 Weapon::Weapon(const std::string &filename):Entity(filename,0) {
@@ -25,6 +26,10 @@ Weapon::Weapon(const std::string &filename, int munition, AmmoType ammoType):Ent
 
 
 void Weapon::Update() {
+
+    ammunitionSpawnPosition.x = sprite.getPosition().x  + cos(angle * 180 /M_PI) *(texture.getSize().x);
+    ammunitionSpawnPosition.y = sprite.getPosition().y + sin(angle * 180/M_PI) * (-texture.getSize().y);
+
 
 }
 
