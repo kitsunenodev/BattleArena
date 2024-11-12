@@ -57,7 +57,9 @@ add_executable(BattleArena main.cpp
         Entity/LivingEntity/Enemy/ArmoredEnemy.cpp
         Entity/LivingEntity/Enemy/ArmoredEnemy.h
         Entity/LivingEntity/Enemy/FastEnemy.cpp
-        Entity/LivingEntity/Enemy/FastEnemy.h)
+        Entity/LivingEntity/Enemy/FastEnemy.h
+        Wave.cpp
+        Wave.h)
 
 # Debug or release libs based on config type
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")

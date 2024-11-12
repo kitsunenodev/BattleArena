@@ -8,7 +8,7 @@
 #include "FastEnemy.h"
 #include "RegularEnemy.h"
 
-Enemy *EnemyFactory::CreateEnemy(EnemyType type, sf::Vector2f spawnPosition) {
+Enemy *EnemyFactory::CreateEnemy(EnemyType type) {
     Enemy* enemy;
     switch (type) {
         case REGULAR:

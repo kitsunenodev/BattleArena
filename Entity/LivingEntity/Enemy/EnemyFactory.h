@@ -9,7 +9,7 @@
 
 class EnemyFactory {
 public:
-    static Enemy* CreateEnemy(EnemyType type, sf::Vector2f spawnPosition);
+    static Enemy* CreateEnemy(EnemyType type);
 
 };
 
