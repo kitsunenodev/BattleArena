@@ -6,6 +6,11 @@
 #define ENEMY_H
 #include "../LivingEntity.h"
 
+enum EnemyType {
+    REGULAR,
+    ARMORED,
+    FAST
+};
 
 class Enemy : public LivingEntity{
 public:

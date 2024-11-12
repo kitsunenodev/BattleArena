@@ -38,8 +38,8 @@ add_executable(BattleArena main.cpp
         GameManager.h
         Entity/LivingEntity/Enemy/Enemy.cpp
         Entity/LivingEntity/Enemy/Enemy.h
-        Entity/LivingEntity/Enemy/BasicEnemy.cpp
-        Entity/LivingEntity/Enemy/BasicEnemy.h
+        Entity/LivingEntity/Enemy/RegularEnemy.cpp
+        Entity/LivingEntity/Enemy/RegularEnemy.h
         Ammo/RegularAmmo.cpp
         Ammo/RegularAmmo.h
         Ammo/ExplosiveAmmo.cpp
@@ -51,7 +51,13 @@ add_executable(BattleArena main.cpp
         Weapon/WeaponFactory.cpp
         Weapon/WeaponFactory.h
         Entity/Entity.cpp
-        SpriteManager.h)
+        SpriteManager.h
+        Entity/LivingEntity/Enemy/EnemyFactory.cpp
+        Entity/LivingEntity/Enemy/EnemyFactory.h
+        Entity/LivingEntity/Enemy/ArmoredEnemy.cpp
+        Entity/LivingEntity/Enemy/ArmoredEnemy.h
+        Entity/LivingEntity/Enemy/FastEnemy.cpp
+        Entity/LivingEntity/Enemy/FastEnemy.h)
 
 # Debug or release libs based on config type
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")

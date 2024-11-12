@@ -7,7 +7,9 @@
 #include "Enemy.h"
 
 
-class BasicEnemy : public Enemy{
+class RegularEnemy : public Enemy{
+public:
+    RegularEnemy();
     void Update() override;
     void Rotate() override;
 

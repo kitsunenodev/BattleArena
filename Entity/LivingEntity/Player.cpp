@@ -125,10 +125,8 @@ void Player::CalculateWeaponPosition() {
 void Player::SwitchWeapon(float scrollOffset){
     if (timeLeftBeforeScroll <= 0) {
         timeLeftBeforeScroll = scrollDelay;
-        std::cout << "current weapon index before actualisation" <<currentWeaponIndex << std::endl;
         currentWeaponIndex += std::min(std::max(static_cast<int>(scrollOffset),-2),2);
         currentWeaponIndex = (weapons_.size() + currentWeaponIndex) % (weapons_.size()) ;
-        std::cout << "current weapon index after actualisation" <<currentWeaponIndex << std::endl;
     }
 
     currentWeapon = weapons_[currentWeaponIndex];
