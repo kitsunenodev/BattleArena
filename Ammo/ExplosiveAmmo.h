@@ -9,7 +9,7 @@
 
 class ExplosiveAmmo: public Ammunition{
 public:
-    ExplosiveAmmo();
+    ExplosiveAmmo(sf::Vector2f spawnPosition, std::string& filename, int speed);
     void Update() override;
     void Rotate() override;
 

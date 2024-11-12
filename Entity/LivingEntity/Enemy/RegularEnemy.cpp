@@ -3,3 +3,15 @@
 //
 
 #include "RegularEnemy.h"
+
+RegularEnemy::RegularEnemy() = default;
+
+void RegularEnemy::Update() {
+}
+
+void RegularEnemy::Rotate() {
+}
+
+void RegularEnemy::Display(sf::RenderWindow &window) {
+    Enemy::Display(window);
+}

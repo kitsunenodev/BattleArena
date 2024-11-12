@@ -7,3 +7,6 @@
 Enemy::Enemy(const std::string &filename, int maxHealth, int armor, float speed)
         : LivingEntity(filename, maxHealth, armor, speed) {
 }
+
+Enemy::Enemy(): LivingEntity() {
+}

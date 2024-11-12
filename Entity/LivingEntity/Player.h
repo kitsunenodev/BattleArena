@@ -13,15 +13,15 @@ class Player: public LivingEntity{
 public:
     Player(const std::string &filename, int maxHealth, int armor, float speed);
     void Update() override;
-    void Move(float deltaTime);
+    void HandleInput(float deltaTime);
     void Rotate() override;
     void ClampPosition();
-    void Display(sf::RenderWindow &window);
+    void Display(sf::RenderWindow &window) override;
     void AddWeapon(Weapon* weapon);
     void SwitchWeapon(float scrollOffset);
 protected:
     float scrollDelay = 0.1;
-    float timeLeftBeforeScroll;
+    float timeLeftBeforeScroll{};
     sf::Vector2f weaponPosition;
     std::vector<Weapon*> weapons_;
     Weapon* currentWeapon{};

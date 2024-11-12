@@ -4,7 +4,8 @@
 
 #include "RegularAmmo.h"
 
-RegularAmmo::RegularAmmo() {
+RegularAmmo::RegularAmmo(sf::Vector2f spawnPosition, std::string& filename, int speed): Ammunition(spawnPosition, filename, speed) {
+
 }
 
 void RegularAmmo::Rotate() {

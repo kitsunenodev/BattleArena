@@ -15,7 +15,7 @@ enum EnemyType {
 class Enemy : public LivingEntity{
 public:
     Enemy(const std::string &filename, int maxHealth, int armor, float speed);
-
+    Enemy();
 };
 
 

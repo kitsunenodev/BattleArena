@@ -9,9 +9,9 @@ int main()
   GameManager& gameManagerInstance = GameManager::GetInstance();
   const char *playerSprite = "../Sprites/raw/player/ship2.png";
   const char *BackgroundFile = "../Sprites/raw/grass_template2.jpg";
-  const char *WeaponSprite = "../Sprites/raw/projectiles/rocket.png";
   Player player1  = Player(playerSprite,10,1,100);
   Background background = Background(BackgroundFile);
+  gameManagerInstance.AddPlayer(&player1);
   gameManagerInstance.SetBackGround(background);
   sf::Clock clock;
   while (gameManagerInstance.window_.isOpen()) {
@@ -33,13 +33,12 @@ int main()
 
       }
     }
-    player1.Update();
-    player1.Rotate();
-    player1.Move(gameManagerInstance.deltaTime);
+    gameManagerInstance.Update();
+
 
     gameManagerInstance.window_.clear();
     background.Display(gameManagerInstance.window_);
-    player1.Display(gameManagerInstance.window_);
+    gameManagerInstance.Display(gameManagerInstance.window_);
     gameManagerInstance.window_.display();
 
   }

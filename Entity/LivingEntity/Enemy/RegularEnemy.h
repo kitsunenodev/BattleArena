@@ -12,6 +12,7 @@ public:
     RegularEnemy();
     void Update() override;
     void Rotate() override;
+    void Display(sf::RenderWindow &window) override;
 
 };
 

@@ -4,7 +4,7 @@
 
 #include "ExplosiveAmmo.h"
 
-ExplosiveAmmo::ExplosiveAmmo() {
+ExplosiveAmmo::ExplosiveAmmo(sf::Vector2f spawnPosition, std::string& filename, int speed): Ammunition(spawnPosition,filename,speed) {
 
 }
 

@@ -4,7 +4,6 @@
 
 #ifndef GAMEMANAGER_H
 #define GAMEMANAGER_H
-#include <list>
 
 #include "Background.h"
 #include "SpriteManager.h"
@@ -15,21 +14,24 @@
 
 class GameManager {
 protected:
-        std::list<Enemy*> enemies_;
-        std::list<Player*> players_;
-        std::list<Ammunition*> playerProjectiles;
-        std::list<Ammunition*> enemyProjectiles;
+        std::vector<Enemy*> enemies_;
+        std::vector<Player*> players_;
+        std::vector<Ammunition*> playerProjectiles;
+        std::vector<Ammunition*> enemyProjectiles;
         Background background;
 
 public:
-        float deltaTime;
+        void AddPlayer(Player* player);
         SpriteManager spriteManager;
-        static GameManager& GetInstance();
         sf::RenderWindow window_;
+        float deltaTime;
+        ~GameManager() = default;
+        static GameManager& GetInstance();
+        void Update();
         void Display(sf::RenderWindow &window);
         void SetBackGround(Background& background);
         sf::Vector2u GetArenaSize();
-        ~GameManager() = default;
+        void PlayerShoot(AmmoType type,sf::Vector2f ammunitionSpawnPosition);
 private:
         GameManager();
 

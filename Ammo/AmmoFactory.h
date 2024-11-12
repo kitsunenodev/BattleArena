@@ -9,7 +9,7 @@
 
 class AmmoFactory {
 public:
-    static Ammunition* CreateAmmo(AmmoType type);
+    static Ammunition* CreateAmmo(AmmoType type, sf::Vector2f spawnPosition);
 
 };
 

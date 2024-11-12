@@ -10,3 +10,5 @@ LivingEntity::LivingEntity(const std::string &filename, int maxHealth, int armor
     this->currentHealth = maxHealth;
 }
 
+LivingEntity::LivingEntity(): maxHealth(0), currentHealth(0), armorPoint(0) {
+}

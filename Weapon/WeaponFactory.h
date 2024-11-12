@@ -9,7 +9,7 @@
 
 class WeaponFactory {
 public:
-    static Weapon* CreateWeapon(const std::string& filename, AmmoType ammoType, int nbMunition);
+    static Weapon* CreateWeapon(const std::string& filename, AmmoType ammoType, int nbMunition, float reloadTime, float shootTime, int magazineCapacity);
 
 
 

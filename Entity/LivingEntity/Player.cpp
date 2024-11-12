@@ -21,14 +21,12 @@ Player::Player(const std::string &filename, int maxHealth, int armor, float spee
     for (int i = 0; i < 3; ++i) {
         std::cout<< i << std::endl;
         auto weapon = WeaponFactory::CreateWeapon(GameManager::GetInstance().spriteManager.weaponSprites[i],
-            static_cast<AmmoType>(i),100);
+            static_cast<AmmoType>(i),100, 1+i,0.1,10 );
 
         weapons_.push_back(weapon);
 
     }
     currentWeapon = weapons_[0];
-
-
 }
 
 void Player::Update() {
@@ -36,12 +34,15 @@ void Player::Update() {
         currentWeapon = *weapons_.begin();
     }
     timeLeftBeforeScroll -= GameManager::GetInstance().deltaTime;
+    HandleInput(GameManager::GetInstance().deltaTime);
+    Rotate();
+    currentWeapon->Update();
     CalculateWeaponPosition();
     currentWeapon->SetPosition(weaponPosition.x, weaponPosition.y);
 
 }
 
-void Player::Move(float deltaTime) {
+void Player::HandleInput(float deltaTime) {
     horizontalMovement = 0;
     verticalMovement = 0;
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Z)) {
@@ -58,6 +59,13 @@ void Player::Move(float deltaTime) {
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
         horizontalMovement +=1;
+    }
+    if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+        std::cout << "shoot()" << std::endl;
+        currentWeapon->Shoot();
+    }
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Right)) {
+        currentWeapon->StartReload();
     }
 
 

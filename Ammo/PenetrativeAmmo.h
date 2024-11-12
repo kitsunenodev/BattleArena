@@ -9,7 +9,7 @@
 
 class PenetrativeAmmo : public Ammunition{
 public:
-    PenetrativeAmmo();
+    PenetrativeAmmo(sf::Vector2f spawnPosition,std::string& filename, int speed);
     void Update() override;
     void Rotate() override;
 

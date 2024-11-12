@@ -9,7 +9,7 @@
 
 #include "../GameManager.h"
 
-Ammunition::Ammunition(sf::Vector2f spawnPosition) {
+Ammunition::Ammunition(sf::Vector2f spawnPosition, std::string& filename, int speed): Entity(filename,speed) {
     sprite.setPosition(spawnPosition.x,spawnPosition.y);
     sf::Vector2i mousePosition = sf::Mouse::getPosition();
     sf::Vector2f mousePosWorld = GameManager::GetInstance().window_.mapPixelToCoords(mousePosition);
@@ -22,7 +22,11 @@ Ammunition::Ammunition(sf::Vector2f spawnPosition) {
     sprite.setRotation(angle);
 }
 
-void Ammunition::Update() {
+void Ammunition::Update(){
     Move(direction.x, direction.y, GameManager::GetInstance().deltaTime);
 }
+
+Ammunition::~Ammunition() = default;
+
+
 

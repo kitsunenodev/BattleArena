@@ -5,6 +5,9 @@
 #include <SFML/Window/Mouse.hpp>
 #include <cmath>
 #include "Weapon.h"
+
+#include <iostream>
+
 #include "../GameManager.h"
 
 Weapon::Weapon():Entity() {
@@ -19,20 +22,35 @@ Weapon::Weapon(const std::string &filename):Entity(filename,0) {
 
 Weapon::Weapon(const std::string &filename, int munition, AmmoType ammoType):Entity(filename, 0) {
     this->ammoType = ammoType;
-    this->TotalAmmo = munition;
+    this->totalAmmo = munition;
+    sprite.setScale(0.1f,0.1f);
+    sprite.setOrigin(0, texture.getSize().y/2);
+
+}
+
+Weapon::Weapon(const std::string &filename, int munition, AmmoType ammoType, float reloadTime, float shootTime,int magazineCapacity):Entity(filename,0){
+    this->ammoType = ammoType;
+    this->totalAmmo = munition;
+    this->timeBetweenShoot  = shootTime;
+    this->reloadTime = reloadTime;
+    this->magazineCapacity = magazineCapacity;
     sprite.setScale(0.1f,0.1f);
     sprite.setOrigin(0, texture.getSize().y/2);
 
 }
 
 
-
-
 void Weapon::Update() {
-
-    ammunitionSpawnPosition.x = sprite.getPosition().x  + cos(angle * 180 /M_PI) *(texture.getSize().x);
+    ammunitionSpawnPosition.x = sprite.getPosition().x  + cos(angle * 180/M_PI) *(texture.getSize().x);
     ammunitionSpawnPosition.y = sprite.getPosition().y + sin(angle * 180/M_PI) * (-texture.getSize().y);
+    if (timeBeforeEndReloading > 0) {
+        timeBeforeEndReloading -=  GameManager::GetInstance().deltaTime;
+        if (timeBeforeEndReloading <= 0) {
+            Reload();
+        }
+    }
 
+    timeBeforeShoot -= timeBeforeShoot > 0 ? GameManager::GetInstance().deltaTime : 0;
 
 }
 
@@ -52,11 +70,38 @@ void Weapon::Rotate() {
 }
 
 void Weapon::Shoot() {
+    std::cout << isReloading<< std::endl;
+    std::cout << timeBeforeShoot<< std::endl;
+    if (timeBeforeShoot<= 0 && !isReloading) {
+        std::cout << "shoot 2"<< std::endl;
+        if(loadedAmmo > 0) {
+            std::cout << "shoot 3"<< std::endl;
+            timeBeforeShoot = timeBetweenShoot;
+            loadedAmmo--;
+            GameManager::GetInstance().PlayerShoot(ammoType,ammunitionSpawnPosition);
+        }
+        else StartReload();
+    }
+}
 
+void Weapon::StartReload() {
+    if (!isReloading) {
+        timeBeforeEndReloading = reloadTime;
+        isReloading = true;
+    }
 }
 
 void Weapon::Reload() {
-
+    if (totalAmmo >= magazineCapacity) {
+        loadedAmmo += magazineCapacity;
+        totalAmmo -= magazineCapacity;
+    }
+    else {
+        loadedAmmo += totalAmmo;
+        totalAmmo = 0;
+    }
+    isReloading = false;
+    std::cout << "reload()" << std::endl;
 }
 
 

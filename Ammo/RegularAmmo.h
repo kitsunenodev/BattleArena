@@ -9,7 +9,7 @@
 
 class RegularAmmo: public Ammunition{
 public:
-    RegularAmmo();
+    RegularAmmo(sf::Vector2f spawnPosition, std::string& filename, int speed);
     void Update() override;
     void Rotate() override;
 

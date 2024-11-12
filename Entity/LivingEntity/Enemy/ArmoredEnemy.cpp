@@ -3,3 +3,16 @@
 //
 
 #include "ArmoredEnemy.h"
+
+ArmoredEnemy::ArmoredEnemy(): Enemy() {
+}
+
+void ArmoredEnemy::Update() {
+}
+
+void ArmoredEnemy::Rotate() {
+}
+
+void ArmoredEnemy::Display(sf::RenderWindow &window) {
+    Enemy::Display(window);
+}

@@ -9,17 +9,17 @@
 class SpriteManager {
 public:
     const char* playerSprite = "Sprites/raw/player/ship2.png";
-    std::vector<const char*> ammunitionSprites  = {
+    std::vector<std::string> ammunitionSprites  = {
         "../Sprites/raw/projectiles/shotsmall.png",
         "../Sprites/raw/projectiles/shotbig.png",
         "../Sprites/raw/projectiles/shotoval.png"
     };
-    std::vector<const char*> enemySprites ={
+    std::vector<std::string> enemySprites ={
         "../Sprites/raw/enemies/rocketship/png",
         "../Sprites/raw/enemies/rocketship/png",
         "../Sprites/raw/enemies/rocketship/png"
     };
-    std::vector<const char*> weaponSprites = {
+    std::vector<std::string> weaponSprites = {
         "../Sprites/ArmoredSoldier/weapon_1.png",
         "../Sprites/ArmoredSoldier/weapon_2.png",
         "../Sprites/ArmoredSoldier/weapon_3.png"

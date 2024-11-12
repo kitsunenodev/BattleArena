@@ -15,6 +15,9 @@ protected:
 
 public:
     LivingEntity(const std::string &filename, int maxHealth, int armor, float speed);
+
+    LivingEntity();
+
     void TakeDamage(int damageAmount);
 };
 
