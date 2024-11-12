@@ -4,7 +4,7 @@
 
 #ifndef ENEMY_H
 #define ENEMY_H
-#include "LivingEntity.h"
+#include "../LivingEntity.h"
 
 
 class Enemy : public LivingEntity{

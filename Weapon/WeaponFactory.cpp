@@ -5,6 +5,5 @@
 #include "WeaponFactory.h"
 
 Weapon *WeaponFactory::CreateWeapon(const std::string &filename, const AmmoType ammoType, const int nbMunition) {
-    auto* weapon = new Weapon(filename, nbMunition, ammoType);
-    return weapon;
+    return new Weapon(filename, nbMunition, ammoType);
 }

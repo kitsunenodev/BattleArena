@@ -9,6 +9,7 @@
 
 Weapon::Weapon():Entity() {
     sprite.setPosition(100,100);
+    sprite.setScale(0.1f,0.1f);
     sprite.setOrigin(texture.getSize().x/2, texture.getSize().y);
 }
 
@@ -19,6 +20,8 @@ Weapon::Weapon(const std::string &filename):Entity(filename,0) {
 Weapon::Weapon(const std::string &filename, int munition, AmmoType ammoType):Entity(filename, 0) {
     this->ammoType = ammoType;
     this->TotalAmmo = munition;
+    sprite.setScale(0.1f,0.1f);
+    sprite.setOrigin(0, texture.getSize().y/2);
 
 }
 

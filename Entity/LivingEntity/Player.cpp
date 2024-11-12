@@ -8,7 +8,8 @@
 #include <iostream>
 #include <SFML/Window/Event.hpp>
 
-#include "../GameManager.h"
+#include "../../GameManager.h"
+#include "../../Weapon/WeaponFactory.h"
 
 Player::Player(const std::string &filename, int maxHealth, int armor, float speed): LivingEntity(filename,maxHealth,armor,speed) {
     verticalMovement = 0;
@@ -17,6 +18,15 @@ Player::Player(const std::string &filename, int maxHealth, int armor, float spee
     player_view.zoom(4.f);
     player_view.setViewport(sf::FloatRect(0.f,0.f,1.f,1.f));
     currentWeapon = nullptr;
+    for (int i = 0; i < 3; ++i) {
+        std::cout<< i << std::endl;
+        auto weapon = WeaponFactory::CreateWeapon(GameManager::GetInstance().spriteManager.weaponSprites[i],
+            static_cast<AmmoType>(i),100);
+
+        weapons_.push_back(weapon);
+
+    }
+    currentWeapon = weapons_[0];
 
 
 }
@@ -26,6 +36,7 @@ void Player::Update() {
         std::cout << currentWeapon << std::endl;
         currentWeapon = *weapons_.begin();
     }
+    timeLeftBeforeScroll -= GameManager::GetInstance().deltaTime;
     CalculateWeaponPosition();
     currentWeapon->SetPosition(weaponPosition.x, weaponPosition.y);
 
@@ -49,6 +60,7 @@ void Player::Move(float deltaTime) {
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
         horizontalMovement +=1;
     }
+
 
     Entity::Move(horizontalMovement, verticalMovement, deltaTime);
 
@@ -108,6 +120,18 @@ void Player::CalculateWeaponPosition() {
     currentWeapon->Rotate();
 
 
+}
+
+void Player::SwitchWeapon(float scrollOffset){
+    if (timeLeftBeforeScroll <= 0) {
+        timeLeftBeforeScroll = scrollDelay;
+        std::cout << "current weapon index before actualisation" <<currentWeaponIndex << std::endl;
+        currentWeaponIndex += std::min(std::max(static_cast<int>(scrollOffset),-2),2);
+        currentWeaponIndex = (weapons_.size() + currentWeaponIndex) % (weapons_.size()) ;
+        std::cout << "current weapon index after actualisation" <<currentWeaponIndex << std::endl;
+    }
+
+    currentWeapon = weapons_[currentWeaponIndex];
 }
 
 

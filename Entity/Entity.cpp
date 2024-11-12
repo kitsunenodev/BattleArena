@@ -22,12 +22,16 @@ Entity::Entity(const std::string &filename, float speed) {
 }
 
 void Entity::Move(int x, int y, float deltaTime) {
+    float xSpeedSquared = x * x;
+    float ySpeedSquared = y * y;
+    float magnitude = xSpeedSquared + ySpeedSquared;
     float normalizedSpeedX = 0;
     float normalizedSpeedY = 0;
-    float totalSpeedSquared = speed * speed;
 
-    normalizedSpeedX = x * sqrt(totalSpeedSquared - (totalSpeedSquared * 0.5 * abs(y)));
-    normalizedSpeedY = y * sqrt(totalSpeedSquared - (totalSpeedSquared * 0.5 * abs(x)));
+    if (magnitude != 0) {
+        normalizedSpeedX = x < 0 ? -sqrtf(xSpeedSquared/magnitude) * speed: sqrtf(xSpeedSquared / magnitude) * speed;
+        normalizedSpeedY = y <0  ?  -sqrtf(ySpeedSquared/magnitude) * speed : sqrtf(ySpeedSquared / magnitude) * speed;
+    }
     sprite.move(normalizedSpeedX * deltaTime, normalizedSpeedY * deltaTime);
 
 }
@@ -54,11 +58,4 @@ sf::Sprite Entity::GetSprite() {
 void Entity::SetPosition(float x, float y) {
     sprite.setPosition(x,y);
 }
-
-void Entity::RotateGlobal(sf::Vector2f position, float angle) {
-    sprite.setRotation(angle);
-}
-
-
-
 

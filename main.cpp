@@ -1,45 +1,46 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-
 #include "Background.h"
 #include "GameManager.h"
-#include "Entity/Player.h"
+#include "Entity/LivingEntity/Player.h"
 
 int main()
 {
-
-  GameManager& instance = GameManager::GetInstance();
+  GameManager& gameManagerInstance = GameManager::GetInstance();
   const char *playerSprite = "../Sprites/raw/player/ship2.png";
   const char *BackgroundFile = "../Sprites/raw/grass_template2.jpg";
   const char *WeaponSprite = "../Sprites/raw/projectiles/rocket.png";
-  Weapon weapon(WeaponSprite);
   Player player1  = Player(playerSprite,10,1,100);
-  player1.AddWeapon(&weapon);
   Background background = Background(BackgroundFile);
-  instance.SetBackGround(background);
+  gameManagerInstance.SetBackGround(background);
   sf::Clock clock;
-  while (instance.window_.isOpen()) {
+  while (gameManagerInstance.window_.isOpen()) {
     sf::Event event;
     sf::Time time = clock.restart();
-    float deltaTime = time.asSeconds();
+    gameManagerInstance.deltaTime  = time.asSeconds();
 
-    while (instance.window_.pollEvent(event)) {
+    while (gameManagerInstance.window_.pollEvent(event)) {
       if (event.type == sf::Event::Closed) {
-          instance.window_.close();
+          gameManagerInstance.window_.close();
       }
       if (event.type == sf::Event::KeyPressed) {
         if (event.key.code == sf::Keyboard::Key::Escape)
-            instance.window_.close();
+            gameManagerInstance.window_.close();
+      }
+      if (event.type == sf::Event::MouseWheelScrolled){
+        player1.SwitchWeapon(event.mouseWheelScroll.delta);
+
+
       }
     }
     player1.Update();
     player1.Rotate();
-    player1.Move(deltaTime);
+    player1.Move(gameManagerInstance.deltaTime);
 
-    instance.window_.clear();
-    background.Display(instance.window_);
-    player1.Display(instance.window_);
-      instance.window_.display();
+    gameManagerInstance.window_.clear();
+    background.Display(gameManagerInstance.window_);
+    player1.Display(gameManagerInstance.window_);
+    gameManagerInstance.window_.display();
 
   }
 }

@@ -4,10 +4,9 @@
 
 #ifndef PLAYER_H
 #define PLAYER_H
-#include <list>
 
 #include "LivingEntity.h"
-#include "../Weapon/Weapon.h"
+#include "../../Weapon/Weapon.h"
 
 
 class Player: public LivingEntity{
@@ -19,9 +18,12 @@ public:
     void ClampPosition();
     void Display(sf::RenderWindow &window);
     void AddWeapon(Weapon* weapon);
+    void SwitchWeapon(float scrollOffset);
 protected:
+    float scrollDelay = 0.1;
+    float timeLeftBeforeScroll;
     sf::Vector2f weaponPosition;
-    std::list<Weapon*> weapons_;
+    std::vector<Weapon*> weapons_;
     Weapon* currentWeapon{};
     int currentWeaponIndex{};
     sf::View player_view;

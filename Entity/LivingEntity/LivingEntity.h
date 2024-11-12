@@ -4,7 +4,7 @@
 
 #ifndef LIVINGENTITY_H
 #define LIVINGENTITY_H
-#include "Entity.h"
+#include "../Entity.h"
 
 
 class LivingEntity : public Entity {

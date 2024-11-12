@@ -4,15 +4,10 @@
 
 #include "GameManager.h"
 
-// GameManager &GameManager::getInstance() {
-//     if (!instance) {
-//         instance = new GameManager();
-//     }
-//     return *instance;
-// }
-
 GameManager::GameManager() {
     window_.create(sf::VideoMode(1920, 1080), "Main Scene", sf::Style::Fullscreen);
+    spriteManager = SpriteManager();
+
 }
 
 GameManager &GameManager::GetInstance(){

@@ -11,17 +11,16 @@
 
 class Entity {
 protected:
-    float angle = 0;
-    float speed;
     sf::Sprite sprite;
     sf::Texture texture;
+    float angle = 0;
+    float speed;
 
 public:
     float GetSpriteHalfWidth() const;
     float GetSpriteHalfHeight() const;
     sf::Sprite GetSprite();
     void SetPosition(float x, float y);
-    void RotateGlobal(sf::Vector2f position, float angle);
     void ResetOrigin();
     virtual ~Entity() = default;
     virtual void Update() = 0;
@@ -30,7 +29,7 @@ public:
     Entity(const std::string &filename, float speed);
     void Move(int x, int y,float deltaTime);
 
-    void Display(sf::RenderWindow &window);
+    virtual void Display(sf::RenderWindow &window);
 
 };
 
