@@ -13,6 +13,10 @@ class Wave {
 public:
     Wave(float timeBeforeSpawn, float timeBetweenSpawn, int nbEnemy);
     std::vector<EnemyType> enemies;
+
+    void StartWave();
+    void SpawnEnemy();
+    bool isFinished();
 protected:
     bool waveStarted = false;
     float timeBetweenEnemySpawn = 0;

@@ -12,6 +12,11 @@ enum AmmoType {
     PENETRATIVE_AMMO
 };
 class Ammunition : public Entity{
+    Ammunition(sf::Vector2f spawnPosition);
+protected:
+    sf::Vector2f direction;
+    void Update() override;
+
 
 };
 

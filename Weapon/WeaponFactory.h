@@ -11,6 +11,9 @@ class WeaponFactory {
 public:
     static Weapon* CreateWeapon(const std::string& filename, AmmoType ammoType, int nbMunition);
 
+
+
+
 };
 
 

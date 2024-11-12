@@ -33,7 +33,6 @@ Player::Player(const std::string &filename, int maxHealth, int armor, float spee
 
 void Player::Update() {
     if (currentWeapon == nullptr) {
-        std::cout << currentWeapon << std::endl;
         currentWeapon = *weapons_.begin();
     }
     timeLeftBeforeScroll -= GameManager::GetInstance().deltaTime;
