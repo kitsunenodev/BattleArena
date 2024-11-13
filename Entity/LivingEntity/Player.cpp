@@ -5,7 +5,6 @@
 #include "Player.h"
 
 #include <cmath>
-#include <iostream>
 #include <SFML/Window/Event.hpp>
 
 #include "../../GameManager.h"
@@ -19,7 +18,6 @@ Player::Player(const std::string &filename, int maxHealth, int armor, float spee
     player_view.setViewport(sf::FloatRect(0.f,0.f,1.f,1.f));
     currentWeapon = nullptr;
     for (int i = 0; i < 3; ++i) {
-        std::cout<< i << std::endl;
         auto weapon = WeaponFactory::CreateWeapon(GameManager::GetInstance().spriteManager.weaponSprites[i],
             static_cast<AmmoType>(i),100, 1+i,0.1,10 );
 
@@ -61,11 +59,18 @@ void Player::HandleInput(float deltaTime) {
         horizontalMovement +=1;
     }
     if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-        std::cout << "shoot()" << std::endl;
         currentWeapon->Shoot();
     }
     if (sf::Mouse::isButtonPressed(sf::Mouse::Right)) {
-        currentWeapon->StartReload();
+
+        sf::Vector2i mousePosition = sf::Mouse::getPosition(GameManager::GetInstance().window_);
+        sf::Vector2f windowSize = GameManager::GetInstance().window_.getView().getSize();
+
+        // Check if mouse is inside window
+        if (mousePosition.x >= 0 && mousePosition.x < windowSize.x &&
+            mousePosition.y >= 0 && mousePosition.y < windowSize.y) {
+            currentWeapon->StartReload();
+        }
     }
 
 

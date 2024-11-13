@@ -34,8 +34,6 @@ int main()
       }
     }
     gameManagerInstance.Update();
-
-
     gameManagerInstance.window_.clear();
     background.Display(gameManagerInstance.window_);
     gameManagerInstance.Display(gameManagerInstance.window_);

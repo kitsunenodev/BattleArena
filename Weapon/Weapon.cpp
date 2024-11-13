@@ -70,12 +70,8 @@ void Weapon::Rotate() {
 }
 
 void Weapon::Shoot() {
-    std::cout << isReloading<< std::endl;
-    std::cout << timeBeforeShoot<< std::endl;
     if (timeBeforeShoot<= 0 && !isReloading) {
-        std::cout << "shoot 2"<< std::endl;
         if(loadedAmmo > 0) {
-            std::cout << "shoot 3"<< std::endl;
             timeBeforeShoot = timeBetweenShoot;
             loadedAmmo--;
             GameManager::GetInstance().PlayerShoot(ammoType,ammunitionSpawnPosition);
@@ -101,7 +97,6 @@ void Weapon::Reload() {
         totalAmmo = 0;
     }
     isReloading = false;
-    std::cout << "reload()" << std::endl;
 }
 
 

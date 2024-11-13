@@ -46,7 +46,7 @@ void GameManager::Display(sf::RenderWindow &window) {
     }
 
     for (Ammunition* ammo : playerProjectiles) {
-        std::cout << "ammo1"<< std::endl;
+        std::cout << ammo->GetSprite().getPosition().x<< std::endl;
         ammo->Display(window);
     }
     for (Ammunition* enemyAmmo : enemyProjectiles) {
@@ -67,7 +67,6 @@ void GameManager::AddPlayer(Player *player) {
 }
 
 void GameManager::PlayerShoot(AmmoType type,sf::Vector2f ammunitionSpawnPosition) {
-    std::cout << "shoot game manager"<< std::endl;
     auto ammo  = AmmoFactory::CreateAmmo(type,ammunitionSpawnPosition);
     playerProjectiles.push_back(ammo);
     std::cout << playerProjectiles[0]<< std::endl;
