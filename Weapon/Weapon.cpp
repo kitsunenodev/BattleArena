@@ -42,7 +42,7 @@ Weapon::Weapon(const std::string &filename, int munition, AmmoType ammoType, flo
 
 void Weapon::Update() {
     ammunitionSpawnPosition.x = sprite.getPosition().x  + cos(angle * 180/M_PI) *(texture.getSize().x);
-    ammunitionSpawnPosition.y = sprite.getPosition().y + sin(angle * 180/M_PI) * (-texture.getSize().y);
+    ammunitionSpawnPosition.y = sprite.getPosition().y + sin(angle * 180/M_PI) * (texture.getSize().x);
     if (timeBeforeEndReloading > 0) {
         timeBeforeEndReloading -=  GameManager::GetInstance().deltaTime;
         if (timeBeforeEndReloading <= 0) {
