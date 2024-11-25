@@ -59,7 +59,8 @@ add_executable(BattleArena main.cpp
         Entity/LivingEntity/Enemy/FastEnemy.cpp
         Entity/LivingEntity/Enemy/FastEnemy.h
         Wave.cpp
-        Wave.h)
+        Wave.h
+        WeaponValues.h)
 
 # Debug or release libs based on config type
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")

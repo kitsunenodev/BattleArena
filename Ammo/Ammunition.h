@@ -9,7 +9,7 @@
 enum AmmoType {
     REGULAR_AMMO,
     EXPLOSIVE_AMMO,
-    PENETRATIVE_AMMO
+    FAST_AMMO
 };
 class Ammunition : public Entity{
 public:

@@ -20,7 +20,7 @@ Ammunition *AmmoFactory::CreateAmmo(AmmoType type, sf::Vector2f spawnPosition) {
         case EXPLOSIVE_AMMO:
             ammo = new ExplosiveAmmo(spawnPosition, GameManager::GetInstance().spriteManager.ammunitionSprites[1],500);
             break;
-        case PENETRATIVE_AMMO:
+        case FAST_AMMO:
             ammo = new PenetrativeAmmo(spawnPosition, GameManager::GetInstance().spriteManager.ammunitionSprites[2],150);
             break;
         default:
