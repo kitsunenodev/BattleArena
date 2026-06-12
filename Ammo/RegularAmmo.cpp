@@ -4,7 +4,7 @@
 
 #include "RegularAmmo.h"
 
-RegularAmmo::RegularAmmo(sf::Vector2f spawnPosition, std::string& filename, int speed): Ammunition(spawnPosition, filename, speed) {
+RegularAmmo::RegularAmmo(sf::Vector2f spawnPosition, std::string& filename, float speed, int AmmoDamage): Ammunition(spawnPosition, filename, speed, AmmoDamage) {
 
 }
 

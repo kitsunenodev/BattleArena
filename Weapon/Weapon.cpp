@@ -30,10 +30,12 @@ Weapon::Weapon(const std::string &filename, int munition, AmmoType ammoType):Ent
 
 Weapon::Weapon(const std::string &filename, int munition, AmmoType ammoType, float reloadTime, float shootTime,int magazineCapacity):Entity(filename,0){
     this->ammoType = ammoType;
-    this->totalAmmo = munition;
+    this->totalAmmo = munition - magazineCapacity;
+    this->loadedAmmo = magazineCapacity;
     this->timeBetweenShoot  = shootTime;
     this->reloadTime = reloadTime;
     this->magazineCapacity = magazineCapacity;
+
     sprite.setOrigin(texture.getSize().x/2, texture.getSize().y/2);
     sprite.setScale(0.1f,0.1f);
 }

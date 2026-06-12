@@ -11,8 +11,8 @@ public:
     const char* playerSprite = "Sprites/raw/player/ship2.png";
     std::vector<std::string> ammunitionSprites  = {
         "../Sprites/raw/projectiles/shotsmall.png",
-        "../Sprites/raw/projectiles/shotbig.png",
-        "../Sprites/raw/projectiles/shotoval.png"
+        "../Sprites/raw/projectiles/rocket.png",
+        "../Sprites/raw/projectiles/shotwave.png"
     };
     std::vector<std::string> enemySprites ={
         "../Sprites/raw/enemies/rocketship/png",
@@ -21,8 +21,8 @@ public:
     };
     std::vector<std::string> weaponSprites = {
         "../Sprites/ArmoredSoldier/weapon_1.png",
-        "../Sprites/ArmoredSoldier/weapon_2.png",
-        "../Sprites/ArmoredSoldier/weapon_3.png"
+        "../Sprites/ArmoredSoldier/weapon_3.png",
+        "../Sprites/ArmoredSoldier/weapon_2.png"
     };
 };
 #endif //SPRITEMANAGER_H

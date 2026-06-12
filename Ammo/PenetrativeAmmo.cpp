@@ -4,7 +4,8 @@
 
 #include "PenetrativeAmmo.h"
 
-PenetrativeAmmo::PenetrativeAmmo(sf::Vector2f spawnPosition, std::string& filename, int speed): Ammunition(spawnPosition, filename, speed) {}
+PenetrativeAmmo::PenetrativeAmmo(sf::Vector2f spawnPosition, std::string& filename, float speed, int AmmoDamage):
+Ammunition(spawnPosition, filename, speed, AmmoDamage) {}
 
 void PenetrativeAmmo::Rotate() {
 

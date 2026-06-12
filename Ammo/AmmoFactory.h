@@ -5,6 +5,7 @@
 #ifndef AMMOFACTORY_H
 #define AMMOFACTORY_H
 #include "Ammunition.h"
+#include "../Weapon/WeaponValues.h"
 
 
 class AmmoFactory {

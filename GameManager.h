@@ -7,7 +7,7 @@
 
 #include "Background.h"
 #include "SpriteManager.h"
-#include "WeaponValues.h"
+#include "Weapon/WeaponValues.h"
 #include "Ammo/Ammunition.h"
 #include "Entity/LivingEntity/Enemy/Enemy.h"
 #include "Entity/LivingEntity/Player.h"
@@ -24,7 +24,7 @@ protected:
 public:
         void AddPlayer(Player* player);
         SpriteManager spriteManager;
-        WeaponValues weaponValues;
+        WeaponValue weaponValues;
         sf::RenderWindow window_;
         float deltaTime;
         ~GameManager() = default;

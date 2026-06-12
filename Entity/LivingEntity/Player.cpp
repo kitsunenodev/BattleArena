@@ -19,7 +19,11 @@ Player::Player(const std::string &filename, int maxHealth, int armor, float spee
     currentWeapon = nullptr;
     for (int i = 0; i < 3; ++i) {
         auto weapon = WeaponFactory::CreateWeapon(GameManager::GetInstance().spriteManager.weaponSprites[i],
-            static_cast<AmmoType>(i),100, 1+i,0.1,10 );
+            static_cast<AmmoType>(i),
+            i < 2 ? 100 : 1000,
+            WeaponDataHolder::WeaponValues.find(static_cast<AmmoType>(i))->second.ReloadTime,
+            WeaponDataHolder::WeaponValues.find(static_cast<AmmoType>(i))->second.FireRate,
+            WeaponDataHolder::WeaponValues.find(static_cast<AmmoType>(i))->second.MagazineCapacity );
 
         weapons_.push_back(weapon);
 

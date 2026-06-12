@@ -19,6 +19,7 @@ GameManager &GameManager::GetInstance(){
 }
 
 void GameManager::Update() {
+    std::vector<Entity*> EntityToDestroy;
     for (auto & player : players_) {
         player->Update();
     }
@@ -26,10 +27,19 @@ void GameManager::Update() {
         enemie->Update();
     }
     for (auto & playerProjectile : playerProjectiles) {
+        if (playerProjectile == nullptr || playerProjectile->ShouldBeDestroyed){
+            EntityToDestroy.push_back(playerProjectile);
+            continue;
+        }
         playerProjectile->Update();
     }
     for (auto & enemyProjectile : enemyProjectiles) {
         enemyProjectile->Update();
+    }
+    for (auto & entity : EntityToDestroy){
+        std::remove(playerProjectiles.begin(), playerProjectiles.end(),entity);
+        playerProjectiles.pop_back();
+        delete entity;
     }
 }
 
@@ -66,7 +76,6 @@ void GameManager::AddPlayer(Player *player) {
 void GameManager::PlayerShoot(AmmoType type,sf::Vector2f ammunitionSpawnPosition) {
     auto ammo  = AmmoFactory::CreateAmmo(type,ammunitionSpawnPosition);
     playerProjectiles.push_back(ammo);
-    std::cout << playerProjectiles[0]<< std::endl;
 }
 
 

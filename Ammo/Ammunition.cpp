@@ -9,7 +9,8 @@
 
 #include "../GameManager.h"
 
-Ammunition::Ammunition(sf::Vector2f spawnPosition, std::string& filename, int speed): Entity(filename,speed) {
+Ammunition::Ammunition(sf::Vector2f spawnPosition, std::string& filename, float speed, int AmunitionDamage): Entity(filename,speed) {
+    Damage = AmunitionDamage;
     sprite.setPosition(spawnPosition.x,spawnPosition.y);
     sf::Vector2i mousePosition = sf::Mouse::getPosition();
     sf::Vector2f mousePosWorld = GameManager::GetInstance().window_.mapPixelToCoords(mousePosition);
@@ -24,6 +25,10 @@ Ammunition::Ammunition(sf::Vector2f spawnPosition, std::string& filename, int sp
 
 void Ammunition::Update(){
     Move(direction.x, direction.y, GameManager::GetInstance().deltaTime);
+    if (sprite.getPosition().x < 0 || sprite.getPosition().x > GameManager::GetInstance().GetArenaSize().x ||
+        sprite.getPosition().y < 0 || sprite.getPosition().y > GameManager::GetInstance().GetArenaSize().y) {
+        ShouldBeDestroyed = true;
+    }
 }
 
 Ammunition::~Ammunition() = default;

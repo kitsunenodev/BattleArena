@@ -7,6 +7,7 @@
 
 #include "LivingEntity.h"
 #include "../../Weapon/Weapon.h"
+#include "../../Weapon/WeaponValues.h"
 
 
 class Player: public LivingEntity{
