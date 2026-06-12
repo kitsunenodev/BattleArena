@@ -37,11 +37,11 @@ void Entity::Move(int x, int y, float deltaTime) {
 }
 
 float Entity::GetSpriteHalfWidth() const {
-    return texture.getSize().x/2;
+    return texture.getSize().x/2 * sprite.getScale().x;
 }
 
 float Entity::GetSpriteHalfHeight() const {
-    return texture.getSize().y/2;
+    return texture.getSize().y/2 * sprite.getScale().y;
 }
 
 void Entity::Display(sf::RenderWindow &window) {

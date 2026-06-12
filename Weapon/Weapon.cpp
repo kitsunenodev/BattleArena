@@ -12,8 +12,8 @@
 
 Weapon::Weapon():Entity() {
     sprite.setPosition(100,100);
-    sprite.setScale(0.1f,0.1f);
     sprite.setOrigin(texture.getSize().x/2, texture.getSize().y);
+    sprite.setScale(0.1f,0.1f);
 }
 
 Weapon::Weapon(const std::string &filename):Entity(filename,0) {
@@ -23,8 +23,8 @@ Weapon::Weapon(const std::string &filename):Entity(filename,0) {
 Weapon::Weapon(const std::string &filename, int munition, AmmoType ammoType):Entity(filename, 0) {
     this->ammoType = ammoType;
     this->totalAmmo = munition;
+    sprite.setOrigin(texture.getSize().x/2, texture.getSize().y/2);
     sprite.setScale(0.1f,0.1f);
-    sprite.setOrigin(0, texture.getSize().y/2);
 
 }
 
@@ -34,15 +34,12 @@ Weapon::Weapon(const std::string &filename, int munition, AmmoType ammoType, flo
     this->timeBetweenShoot  = shootTime;
     this->reloadTime = reloadTime;
     this->magazineCapacity = magazineCapacity;
+    sprite.setOrigin(texture.getSize().x/2, texture.getSize().y/2);
     sprite.setScale(0.1f,0.1f);
-    sprite.setOrigin(0, texture.getSize().y/2);
-
 }
 
 
 void Weapon::Update() {
-    ammunitionSpawnPosition.x = sprite.getPosition().x  + cos(angle * 180/M_PI) *(texture.getSize().x);
-    ammunitionSpawnPosition.y = sprite.getPosition().y + sin(angle * 180/M_PI) * (texture.getSize().x);
     if (timeBeforeEndReloading > 0) {
         timeBeforeEndReloading -=  GameManager::GetInstance().deltaTime;
         if (timeBeforeEndReloading <= 0) {
@@ -65,8 +62,8 @@ void Weapon::Rotate() {
     angle = std::atan2(dirY, dirX);
     angle *= 180 /M_PI;
     sprite.setRotation(angle);
-
-
+    ammunitionSpawnPosition.x = sprite.getPosition().x + cos(angle * M_PI/180) *(GetSpriteHalfWidth());
+    ammunitionSpawnPosition.y = sprite.getPosition().y + sin(angle * M_PI/180) * (GetSpriteHalfWidth());
 }
 
 void Weapon::Shoot() {
@@ -99,5 +96,8 @@ void Weapon::Reload() {
     isReloading = false;
 }
 
+void Weapon::Display(sf::RenderWindow &window) {
+    Entity::Display(window);
+}
 
 

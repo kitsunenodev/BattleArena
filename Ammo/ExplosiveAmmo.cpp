@@ -13,7 +13,7 @@ void ExplosiveAmmo::Rotate() {
 }
 
 void ExplosiveAmmo::Update() {
-
+ Ammunition::Update();
 }
 
 

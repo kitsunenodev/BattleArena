@@ -7,7 +7,7 @@
 #include "Ammo/Ammunition.h"
 
 class WeaponValues {
-public:
+private:
     std::vector<int> MagazinesCapacity = {
         10,
         1,

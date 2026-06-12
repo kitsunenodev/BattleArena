@@ -125,9 +125,9 @@ void Player::AddWeapon(Weapon* weapon) {
 }
 
 void Player::CalculateWeaponPosition() {
-    weaponPosition.x = sprite.getPosition().x + (cos(angle * M_PI/180) *
-            (sprite.getTexture()->getSize().x/2 + currentWeapon->GetSprite().getOrigin().x/2));
-    weaponPosition.y = sprite.getPosition().y+ (sin(angle *M_PI/180) * (sprite.getTexture()->getSize().y));
+    weaponPosition.x = sprite.getPosition().x + cos(angle * M_PI/180) *
+            (this->GetSpriteHalfWidth() + currentWeapon->GetSpriteHalfWidth());
+    weaponPosition.y = sprite.getPosition().y + sin(angle * M_PI/180) * (GetSpriteHalfHeight() + currentWeapon->GetSpriteHalfWidth());
     currentWeapon->SetPosition(weaponPosition.x, weaponPosition.y);
     currentWeapon->Rotate();
 

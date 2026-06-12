@@ -13,6 +13,6 @@ void RegularAmmo::Rotate() {
 }
 
 void RegularAmmo::Update() {
-
+    Ammunition::Update();
 }
 

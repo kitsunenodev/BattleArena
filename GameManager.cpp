@@ -3,9 +3,7 @@
 //
 
 #include "GameManager.h"
-
 #include <iostream>
-
 #include "Ammo/AmmoFactory.h"
 
 
@@ -23,7 +21,6 @@ GameManager &GameManager::GetInstance(){
 void GameManager::Update() {
     for (auto & player : players_) {
         player->Update();
-
     }
     for (auto & enemie : enemies_) {
         enemie->Update();

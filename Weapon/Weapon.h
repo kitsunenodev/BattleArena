@@ -32,6 +32,7 @@ public:
     void Shoot();
     void StartReload();
     void Reload();
+    void Display(sf::RenderWindow& window) override;
 };
 
 

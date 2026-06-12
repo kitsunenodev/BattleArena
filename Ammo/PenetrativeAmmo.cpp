@@ -11,7 +11,7 @@ void PenetrativeAmmo::Rotate() {
 }
 
 void PenetrativeAmmo::Update() {
-
+    Ammunition::Update();
 }
 
 
