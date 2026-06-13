@@ -17,3 +17,7 @@ void Enemy::Update(){
     if(CurrentState == nullptr) return;
     CurrentState = CurrentState->StateUpdate();
 }
+
+void Enemy::Shoot() {
+
+}

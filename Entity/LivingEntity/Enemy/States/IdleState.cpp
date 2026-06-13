@@ -8,7 +8,7 @@
 
 
 void IdleState::SetMovingState(MovingState *NewMovingState) {
-
+    movingState = NewMovingState;
 }
 
 void IdleState::SetEnemy(Enemy *enemy) {
@@ -17,7 +17,13 @@ void IdleState::SetEnemy(Enemy *enemy) {
 }
 
 State *IdleState::StateUpdate() {
-    if (GameManager::GetInstance().GetDistanceFromClosestPlayer(enemy->GetSprite().getPosition()) < enemy->DetectionRange)
+    if (GameManager::GetInstance().GetDistanceFromClosestPlayer(enemy->GetSprite().getPosition(), enemy->CurrentTarget) < enemy->DetectionRange
+    && GameManager::GetInstance().GetDistanceBetweenEntities(enemy->GetSprite().getPosition(), enemy->CurrentTarget->GetSprite().getPosition()) > enemy->ShootingRangeMax)
         return movingState;
+    if (enemy->CurrentTarget != nullptr && GameManager::GetInstance().GetDistanceBetweenEntities(
+            enemy->GetSprite().getPosition(), enemy->CurrentTarget->GetSprite().getPosition()) < enemy->ShootingRangeMax){
+        enemy->Shoot();
+    }
+
     return State::StateUpdate();
 }

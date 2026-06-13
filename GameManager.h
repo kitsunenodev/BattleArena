@@ -56,7 +56,11 @@ public:
             {FAST_AMMO, {2, 600.f}}
         };
 
-        const float GetDistanceFromClosestPlayer(sf::Vector2f position);
+        float GetDistanceFromClosestPlayer(sf::Vector2f position, Player* ClosestPlayer);
+
+        float GetDistanceBetweenEntities(sf::Vector2f position1, sf::Vector2f position2);
+
+
 private:
         GameManager();
 

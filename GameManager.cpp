@@ -77,13 +77,22 @@ void GameManager::PlayerShoot(AmmoType type,sf::Vector2f ammunitionSpawnPosition
     playerProjectiles.push_back(ammo);
 }
 
-const float GameManager::GetDistanceFromClosestPlayer(sf::Vector2f position) {
+float GameManager::GetDistanceFromClosestPlayer(sf::Vector2f position, Player* ClosestPlayer) {
     float distance = INFINITY;
     for (auto &player: players_){
-        distance = std::min(distance, static_cast<float>(sqrt(pow(position.x - player->GetSprite().getPosition().x, 2)
-                                           + pow(position.y - player->GetSprite().getPosition().y, 2))));
+        float distanceFromCurrentPlayer = static_cast<float>(sqrt(pow(position.x - player->GetSprite().getPosition().x, 2)
+                                           + pow(position.y - player->GetSprite().getPosition().y, 2)));
+        if (distanceFromCurrentPlayer < distance){
+            distance = distanceFromCurrentPlayer;
+            ClosestPlayer = player;
+        }
     }
     return distance;
+}
+
+float GameManager::GetDistanceBetweenEntities(sf::Vector2f position1, sf::Vector2f position2) {
+    return static_cast<float>(sqrt(pow(position2.x - position1.x, 2)
+                            + pow(position1.y - position2.y, 2)));
 }
 
 
