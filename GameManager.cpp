@@ -53,7 +53,6 @@ void GameManager::Display(sf::RenderWindow &window) {
     }
 
     for (Ammunition* ammo : playerProjectiles) {
-        std::cout << ammo->GetSprite().getPosition().x<< std::endl;
         ammo->Display(window);
     }
     for (Ammunition* enemyAmmo : enemyProjectiles) {
@@ -77,6 +76,16 @@ void GameManager::PlayerShoot(AmmoType type,sf::Vector2f ammunitionSpawnPosition
     auto ammo  = AmmoFactory::CreateAmmo(type,ammunitionSpawnPosition);
     playerProjectiles.push_back(ammo);
 }
+
+const float GameManager::GetDistanceFromClosestPlayer(sf::Vector2f position) {
+    float distance = INFINITY;
+    for (auto &player: players_){
+        distance = std::min(distance, static_cast<float>(sqrt(pow(position.x - player->GetSprite().getPosition().x, 2)
+                                           + pow(position.y - player->GetSprite().getPosition().y, 2))));
+    }
+    return distance;
+}
+
 
 
 

@@ -21,9 +21,9 @@ Player::Player(const std::string &filename, int maxHealth, int armor, float spee
         auto weapon = WeaponFactory::CreateWeapon(GameManager::GetInstance().spriteManager.weaponSprites[i],
             static_cast<AmmoType>(i),
             i < 2 ? 100 : 1000,
-            WeaponDataHolder::WeaponValues.find(static_cast<AmmoType>(i))->second.ReloadTime,
-            WeaponDataHolder::WeaponValues.find(static_cast<AmmoType>(i))->second.FireRate,
-            WeaponDataHolder::WeaponValues.find(static_cast<AmmoType>(i))->second.MagazineCapacity );
+            GameManager::GetInstance().WeaponValues.find(static_cast<AmmoType>(i))->second.ReloadTime,
+            GameManager::GetInstance().WeaponValues.find(static_cast<AmmoType>(i))->second.FireRate,
+            GameManager::GetInstance().WeaponValues.find(static_cast<AmmoType>(i))->second.MagazineCapacity );
 
         weapons_.push_back(weapon);
 

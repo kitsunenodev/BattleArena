@@ -12,13 +12,13 @@ protected:
     int maxHealth;
     int currentHealth;
     int armorPoint;
+    bool isAlive = true;
 
 public:
     LivingEntity(const std::string &filename, int maxHealth, int armor, float speed);
-
     LivingEntity();
-
     void TakeDamage(int damageAmount);
+    void Die();
 };
 
 

@@ -12,3 +12,12 @@ LivingEntity::LivingEntity(const std::string &filename, int maxHealth, int armor
 
 LivingEntity::LivingEntity(): maxHealth(0), currentHealth(0), armorPoint(0) {
 }
+
+void LivingEntity::TakeDamage(int damageAmount) {
+    currentHealth -= damageAmount;
+    if (currentHealth <= 0) Die();
+}
+
+void LivingEntity::Die() {
+    isAlive = false;
+}

@@ -5,6 +5,7 @@
 #ifndef ENEMY_H
 #define ENEMY_H
 #include "../LivingEntity.h"
+#include "States/State.h"
 
 enum EnemyType {
     REGULAR,
@@ -14,8 +15,16 @@ enum EnemyType {
 
 class Enemy : public LivingEntity{
 public:
-    Enemy(const std::string &filename, int maxHealth, int armor, float speed);
+    Enemy(const std::string &filename, int maxHealth, int armor, float speed, State* DefaultState);
     Enemy();
+    void Update() override;
+
+    float DetectionRange;
+    float ShootingRangeMin;
+    float ShootingRangeMax;
+
+protected:
+    State* CurrentState;
 };
 
 

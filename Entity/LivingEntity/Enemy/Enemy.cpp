@@ -4,9 +4,16 @@
 
 #include "Enemy.h"
 
-Enemy::Enemy(const std::string &filename, int maxHealth, int armor, float speed)
+Enemy::Enemy(const std::string &filename, int maxHealth, int armor, float speed, State* DefaultState)
         : LivingEntity(filename, maxHealth, armor, speed) {
+    this->CurrentState = DefaultState;
+    CurrentState->SetEnemy(this);
 }
 
 Enemy::Enemy(): LivingEntity() {
+}
+
+void Enemy::Update(){
+    if(CurrentState == nullptr) return;
+    CurrentState = CurrentState->StateUpdate();
 }
