@@ -9,7 +9,7 @@
 
 class ArmoredEnemy : public Enemy{
 public:
-    ArmoredEnemy();
+    ArmoredEnemy(const std::string &filename, int maxHealth, int armor, float speed, State* DefaultState);
     void Update() override;
     void Rotate() override;
     void Display(sf::RenderWindow &window) override;

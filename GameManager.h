@@ -12,6 +12,7 @@
 #include "Ammo/Ammunition.h"
 #include "Entity/LivingEntity/Enemy/Enemy.h"
 #include "Entity/LivingEntity/Player.h"
+#include "Wave/Wave.h"
 
 struct WeaponValue {
     int MagazineCapacity; // Number of ammunition in a magazine
@@ -24,14 +25,30 @@ struct AmmunitionValue {
     float speed;
 };
 
+struct EnemyValue{
+    int maxHealth;
+    int armorPoint;
+    float speed;
+};
+
 
 class GameManager {
 protected:
-        std::vector<Enemy*> enemies_;
-        std::vector<Player*> players_;
-        std::vector<Ammunition*> playerProjectiles;
-        std::vector<Ammunition*> enemyProjectiles;
+        std::vector<Entity*> entities_;
+//        std::vector<Enemy*> enemies_;
+//        std::vector<Player*> players_;
+//        std::vector<Ammunition*> playerProjectiles;
+//        std::vector<Ammunition*> enemyProjectiles;
+        std::vector<Wave*> Waves;
         Background background;
+        void NextWave();
+        int CurrentWaveIndex;
+        int NbEnemySpawned;
+        std::vector<std::pair<EnemyType, float>> DefaultSpawner = {
+                {REGULAR, 0},
+                {ARMORED, 10},
+                {FAST, 5}
+        };
 
 public:
         void AddPlayer(Player* player);
@@ -47,8 +64,8 @@ public:
         void PlayerShoot(AmmoType type,sf::Vector2f ammunitionSpawnPosition);
         const std::map<AmmoType, WeaponValue> WeaponValues = {
                 {REGULAR_AMMO,   {10,  1.f, 0.5f}},
-                {EXPLOSIVE_AMMO, {1,   2.f, 1.f}},
-                {FAST_AMMO,      {200, 1.f, 0.1f}}
+                {EXPLOSIVE_AMMO, {1, 2.f, 1.f}},
+                {FAST_AMMO, {200, 1.f, 0.1f}}
         };
         const std::map<AmmoType, AmmunitionValue> AmmunitionValues = {
             {REGULAR_AMMO, {5, 400.f}},
@@ -56,10 +73,17 @@ public:
             {FAST_AMMO, {2, 600.f}}
         };
 
-        float GetDistanceFromClosestPlayer(sf::Vector2f position, Player* ClosestPlayer);
+        const std::map<EnemyType, EnemyValue> EnemyValues = {
+                {REGULAR, {20, 0, 90}},
+                {ARMORED, {50, 10, 50}},
+                {FAST, {10,0, 150}},
+        };
 
+        float GetDistanceFromClosestPlayer(sf::Vector2f position, Player*& ClosestPlayer);
         float GetDistanceBetweenEntities(sf::Vector2f position1, sf::Vector2f position2);
-
+        void GenerateEnemy(EnemyType type, sf::Vector2<unsigned int> vector2);
+        void AddWaves(std::vector<Wave*>& WaveCollection);
+        void GenerateWaves();
 
 private:
         GameManager();

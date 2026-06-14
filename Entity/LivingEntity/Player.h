@@ -7,7 +7,6 @@
 
 #include "LivingEntity.h"
 #include "../../Weapon/Weapon.h"
-#include "../../Weapon/WeaponValues.h"
 
 
 class Player: public LivingEntity{
@@ -18,7 +17,8 @@ public:
     void Rotate() override;
     void ClampPosition();
     void Display(sf::RenderWindow &window) override;
-    void AddWeapon(Weapon* weapon);
+
+    [[maybe_unused]] void AddWeapon(Weapon* weapon);
     void SwitchWeapon(float scrollOffset);
 protected:
     float scrollDelay = 0.1;

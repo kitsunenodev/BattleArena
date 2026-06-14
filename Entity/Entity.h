@@ -8,6 +8,12 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
 
+enum EntityType{
+    PLAYER,
+    ENEMY,
+    PROJECTILE,
+    ENEMY_PROJECTILE
+};
 
 class Entity {
 protected:
@@ -17,6 +23,8 @@ protected:
     float speed;
 
 public:
+    EntityType entityType;
+    bool ShouldBeDestroyed = false;
     float GetSpriteHalfWidth() const;
     float GetSpriteHalfHeight() const;
     sf::Sprite GetSprite();

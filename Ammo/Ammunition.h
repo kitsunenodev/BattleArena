@@ -16,16 +16,11 @@ public:
     Ammunition(sf::Vector2f spawnPosition, std::string& filename, float speed, int AmmunitionDamage);
     ~Ammunition();
 
-    bool ShouldBeDestroyed = false;
     int Damage;
     void Update() override;
 protected:
     sf::Vector2f direction;
 
-
 };
-
-
-
 
 #endif //BATTLEARENA_AMMUNITION_H

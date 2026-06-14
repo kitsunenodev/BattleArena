@@ -21,6 +21,7 @@ Ammunition::Ammunition(sf::Vector2f spawnPosition, std::string& filename, float 
     angle = std::atan2(direction.y,direction.x);
     angle *= 180/M_PI;
     sprite.setRotation(angle);
+    entityType = PROJECTILE;
 }
 
 void Ammunition::Update(){

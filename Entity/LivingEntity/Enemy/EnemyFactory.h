@@ -5,11 +5,12 @@
 #ifndef ENEMYFACTORY_H
 #define ENEMYFACTORY_H
 #include "Enemy.h"
-
+#include "States/MovingState.h"
+#include "States/IdleState.h"
 
 class EnemyFactory {
 public:
-    static Enemy* CreateEnemy(EnemyType type);
+    static Enemy* CreateEnemy(EnemyType type, sf::Vector2u vector2U);
 
 };
 

@@ -8,9 +8,12 @@ Enemy::Enemy(const std::string &filename, int maxHealth, int armor, float speed,
         : LivingEntity(filename, maxHealth, armor, speed) {
     this->CurrentState = DefaultState;
     CurrentState->SetEnemy(this);
+    sprite.setScale(0.5f, 0.5f);
+    entityType = ENEMY;
 }
 
 Enemy::Enemy(): LivingEntity() {
+    entityType = ENEMY;
 }
 
 void Enemy::Update(){
@@ -19,5 +22,4 @@ void Enemy::Update(){
 }
 
 void Enemy::Shoot() {
-
 }

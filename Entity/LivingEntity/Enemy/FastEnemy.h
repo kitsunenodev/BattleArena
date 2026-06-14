@@ -9,7 +9,7 @@
 
 class FastEnemy: public Enemy{
 public:
-    FastEnemy();
+    FastEnemy(const std::string &filename, int maxHealth, int armor, float speed, State* DefaultState);
     void Update() override;
     void Rotate() override;
     void Display(sf::RenderWindow &window) override;

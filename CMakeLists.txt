@@ -58,15 +58,17 @@ add_executable(BattleArena main.cpp
         Entity/LivingEntity/Enemy/ArmoredEnemy.h
         Entity/LivingEntity/Enemy/FastEnemy.cpp
         Entity/LivingEntity/Enemy/FastEnemy.h
-        Wave.cpp
-        Wave.h
+        Wave/Wave.cpp
+        Wave/Wave.h
         Weapon/WeaponValues.h
         Entity/LivingEntity/Enemy/States/State.cpp
         Entity/LivingEntity/Enemy/States/State.h
         Entity/LivingEntity/Enemy/States/IdleState.cpp
         Entity/LivingEntity/Enemy/States/IdleState.h
         Entity/LivingEntity/Enemy/States/MovingState.cpp
-        Entity/LivingEntity/Enemy/States/MovingState.h)
+        Entity/LivingEntity/Enemy/States/MovingState.h
+        Wave/Spawner.cpp
+        Wave/Spawner.h)
 
 # Debug or release libs based on config type
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")

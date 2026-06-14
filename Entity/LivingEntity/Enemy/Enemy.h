@@ -21,9 +21,9 @@ public:
     void Update() override;
     void Shoot();
 
-    float DetectionRange;
-    float ShootingRangeMin;
-    float ShootingRangeMax;
+    float DetectionRange = 100;
+    float ShootingRangeMin = 50;
+    float ShootingRangeMax = 70;
     Player* CurrentTarget;
 
 protected:

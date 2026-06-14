@@ -29,12 +29,14 @@ Player::Player(const std::string &filename, int maxHealth, int armor, float spee
 
     }
     currentWeapon = weapons_[0];
+    entityType = PLAYER;
 }
 
 void Player::Update() {
     if (currentWeapon == nullptr) {
         currentWeapon = *weapons_.begin();
     }
+
     timeLeftBeforeScroll -= GameManager::GetInstance().deltaTime;
     HandleInput(GameManager::GetInstance().deltaTime);
     Rotate();
@@ -49,7 +51,6 @@ void Player::HandleInput(float deltaTime) {
     verticalMovement = 0;
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Z)) {
         verticalMovement -=1;
-
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
         horizontalMovement -=1;
@@ -77,12 +78,8 @@ void Player::HandleInput(float deltaTime) {
         }
     }
 
-
     Entity::Move(horizontalMovement, verticalMovement, deltaTime);
-
     ClampPosition();
-
-
     player_view.setCenter(sprite.getPosition());
 
 }
@@ -124,7 +121,7 @@ void Player::ClampPosition() {
     sprite.setPosition(posX,posY);
 }
 
-void Player::AddWeapon(Weapon* weapon) {
+[[maybe_unused]] void Player::AddWeapon(Weapon* weapon) {
     weapons_.push_back(weapon);
 }
 

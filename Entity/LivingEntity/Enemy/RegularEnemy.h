@@ -9,7 +9,7 @@
 
 class RegularEnemy : public Enemy{
 public:
-    RegularEnemy();
+    RegularEnemy(const std::string &filename, int maxHealth, int armor, float speed, State* DefaultState);
     void Update() override;
     void Rotate() override;
     void Display(sf::RenderWindow &window) override;
