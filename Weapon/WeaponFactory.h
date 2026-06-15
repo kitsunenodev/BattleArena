@@ -6,7 +6,7 @@
 #define WEAPONFACTORY_H
 #include "Weapon.h"
 
-
+//Handle the creation of the weapons
 class WeaponFactory {
 public:
     static Weapon* CreateWeapon(const std::string& filename, AmmoType ammoType, int nbMunition, float reloadTime, float shootTime, int magazineCapacity);

@@ -8,6 +8,7 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
 
+//Enum for the Different type the entity can be
 enum EntityType{
     PLAYER,
     ENEMY,
@@ -15,6 +16,8 @@ enum EntityType{
     ENEMY_PROJECTILE
 };
 
+
+//Base Class of All the Element Displayed On Screen
 class Entity {
 protected:
     sf::Sprite sprite;

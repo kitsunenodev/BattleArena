@@ -8,16 +8,23 @@
 #include "../Entity/Entity.h"
 
 
+//Class that will handle the shooting logic for the player
 class Weapon: public Entity {
 protected:
+    //The type of projectile this weapon will fire
     AmmoType ammoType;
+    //time between two shot
     float timeBetweenShoot = 0;
+    //time before the weapon can fire again
     float timeBeforeShoot = 0;
     float reloadTime = 0;
     float timeBeforeEndReloading = 0;
     bool isReloading = false;
     int totalAmmo = 0;
+    //number of shot to fire before needing to reload
     int magazineCapacity = 0;
+
+    //number of shot left before reloading
     int loadedAmmo = 0;
     sf::Vector2f ammunitionSpawnPosition;
 

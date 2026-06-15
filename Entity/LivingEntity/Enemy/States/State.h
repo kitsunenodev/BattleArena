@@ -6,6 +6,8 @@
 #define BATTLEARENA_STATE_H
 
 class Enemy;
+
+//Base Class for the State for the State Machine pattern
 class State {
 public:
     virtual State* StateUpdate();

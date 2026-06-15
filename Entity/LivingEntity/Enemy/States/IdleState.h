@@ -8,6 +8,7 @@
 
 #include "State.h"
 class MovingState;
+
 class IdleState : public State {
 public:
     IdleState() = default;

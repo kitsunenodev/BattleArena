@@ -18,8 +18,12 @@ void Spawner::Update(float DeltaTime) {
 }
 
 void Spawner::SpawnNextEnemy() {
+    //if all enemies have been spawned we can return
     if (currentIndex >= EnemyList.size()) return;
+    //if not enought time has passed since the creation of the last enemy we don't create the Enemy
     if (DeltaTimeSinceLastEnemyGeneration < EnemyList[currentIndex].second) return;
+
+    //Create the enemy at a random location in the range of the spawner with a safety to prevent enemies spawning outside the map
     GameManager::GetInstance().GenerateEnemy(EnemyList[currentIndex].first, sf::Vector2u(
             std::max(static_cast<unsigned>(100),std::min(static_cast<unsigned int>(position.x + 2 *
             (static_cast<float>(rand())/ static_cast<float>(rand()) -0.5) * Range),

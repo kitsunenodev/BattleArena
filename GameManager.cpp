@@ -13,17 +13,27 @@ GameManager::GameManager(): deltaTime(0) {
     spriteManager = SpriteManager();
 }
 
+
 GameManager &GameManager::GetInstance(){
     static GameManager instance;
     return instance;
 }
 
+//Handle the update off all of the entities as well as the wave progression
 void GameManager::Update() {
+
+    //List of the entities that will be destroyed at the end of the frame
     std::vector<Entity*> EntityToDestroy;
+
+    //Check if the current wave is finished
     if (NbEnemySpawned == 0 && Waves[CurrentWaveIndex]->isFinished()){
         NextWave();
     }
+
+    //Update the timer of the current wave
     Waves[CurrentWaveIndex]->Update(deltaTime);
+
+    //Update the entities
     for(int i = 0; i < entities_.size(); ++i){
         if (entities_[i] == nullptr || entities_[i]->ShouldBeDestroyed){
             EntityToDestroy.push_back(entities_[i]);
@@ -32,6 +42,7 @@ void GameManager::Update() {
         entities_[i]->Update();
     }
 
+    //Handle the destruction of the entities
     for (auto & entity : EntityToDestroy){
         switch (entity->entityType) {
             case PLAYER:
@@ -54,6 +65,7 @@ void GameManager::Update() {
     }
 }
 
+//Handle the display of the entities
 void GameManager::Display(sf::RenderWindow &window) {
     for (auto * entity : entities_){
         entity->Display(window);

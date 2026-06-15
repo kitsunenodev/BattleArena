@@ -8,12 +8,14 @@
 #include "States/State.h"
 #include "../Player.h"
 
+//Different types of enemy
 enum EnemyType {
     REGULAR,
     ARMORED,
     FAST
 };
 
+//Base class for the enemy
 class Enemy : public LivingEntity{
 public:
     Enemy(const std::string &filename, int maxHealth, int armor, float speed, State* DefaultState);
@@ -21,8 +23,13 @@ public:
     void Update() override;
     void Shoot();
 
+    //Distance at witch the player is detected by the enemy
     float DetectionRange = 100;
+
+    //Distance at witch the enemy stop moving to start shooting at the player
     float ShootingRangeMin = 50;
+
+    //Distance at witch the enemy start moving again to follow the player
     float ShootingRangeMax = 70;
     Player* CurrentTarget;
 

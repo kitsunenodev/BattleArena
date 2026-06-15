@@ -8,6 +8,7 @@
 #include "States/MovingState.h"
 #include "States/IdleState.h"
 
+//Class that handle the Creation of the Enemies;
 class EnemyFactory {
 public:
     static Enemy* CreateEnemy(EnemyType type, sf::Vector2u vector2U);

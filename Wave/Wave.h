@@ -8,7 +8,7 @@
 #include "../Entity/LivingEntity/Enemy/Enemy.h"
 #include "Spawner.h."
 
-
+//Class the handle the spawner
 class Wave {
 public:
     Wave(float timeBeforeSpawn, std::vector<Spawner*>enemySpawner);
@@ -18,7 +18,11 @@ public:
 
 protected:
     bool waveStarted = false;
+
+    // Timer before starting the wave
     float TimerBeforeSpawn;
+
+    //List of all the enemy Spawner
     std::vector<Spawner*> SpawnerList;
 
 

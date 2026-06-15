@@ -6,7 +6,7 @@
 #define LIVINGENTITY_H
 #include "../Entity.h"
 
-
+//Base Class for the Entity with health Points (Player & Enemies)
 class LivingEntity : public Entity {
 protected:
     int maxHealth;
